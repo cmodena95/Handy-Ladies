@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_08_115119) do
+ActiveRecord::Schema.define(version: 2020_12_08_145804) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,30 @@ ActiveRecord::Schema.define(version: 2020_12_08_115119) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["receiver_id"], name: "index_messages_on_receiver_id"
     t.index ["sender_id"], name: "index_messages_on_sender_id"
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.string "checkout_session_id"
+    t.integer "amount"
+    t.string "status"
+    t.bigint "job_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["job_id"], name: "index_payments_on_job_id"
+    t.index ["user_id"], name: "index_payments_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.integer "star_rating"
+    t.bigint "job_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["job_id"], name: "index_reviews_on_job_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "skills", force: :cascade do |t|
@@ -72,6 +96,7 @@ ActiveRecord::Schema.define(version: 2020_12_08_115119) do
     t.float "latitude"
     t.float "longitude"
     t.date "available_util"
+    t.boolean "handylady", default: false, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -81,6 +106,10 @@ ActiveRecord::Schema.define(version: 2020_12_08_115119) do
   add_foreign_key "jobs", "users", column: "handylady_id"
   add_foreign_key "messages", "users", column: "receiver_id"
   add_foreign_key "messages", "users", column: "sender_id"
+  add_foreign_key "payments", "jobs"
+  add_foreign_key "payments", "users"
+  add_foreign_key "reviews", "jobs"
+  add_foreign_key "reviews", "users"
   add_foreign_key "user_skills", "skills"
   add_foreign_key "user_skills", "users"
 end
