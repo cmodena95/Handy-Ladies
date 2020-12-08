@@ -1,0 +1,31 @@
+.homepage-circles-container {
+  display: flex;
+}
+
+.homepage-circles-strip-outer {
+  padding-top: 50px;
+}
+
+.homepage-circles-strip-inner {
+}
+
+.homepage-circle-box {
+  text-align: center;
+  justify-content: space-around;
+}
+
+.homepage-circle {
+  background-color: #FFAAAF;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  color: white;
+  margin: 5px;
+  font-family: Open sans;
+  font-weight: bold;
+  font-size: 13px;
+}
+
