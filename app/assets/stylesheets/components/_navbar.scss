@@ -7,6 +7,17 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+// .navbar-lewagon .navbar-brand img {
+//   width: 40px;
+// }
+
+.home-button-navbar {
+  font-family: Comfortaa;
+  font-size: 15px;
+  text-decoration: none;
+  color: #1A2E35 !important;
+  a {
+    color: #1A2E35 !important;
+    text-decoration: none;
+  }
 }
