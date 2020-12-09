@@ -1,0 +1,74 @@
+/* containers */
+.booking-container{
+  padding-left: 16px;
+  width: 100%;
+}
+
+.flex-container{
+  display: flex;
+}
+
+.booking-info{
+  width: 260px;
+  margin-right: 16px;
+  justify-content: space-between;
+  line-height: 0.1;
+}
+
+.booking-info > h1 {
+  padding-top: 32px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #253F47;
+}
+
+/* Avatar */
+
+.avatar-container{
+  width: 100px;
+  margin-right: 16px;
+  margin-top: 16px;
+}
+
+.booking-avatar{
+  width: 75px;
+  height: 75px;
+}
+
+/* skills */
+
+.skills-container{
+  width: auto;
+}
+
+.skills-container .skill{
+  background-color: $primary;
+  font-weight: bold;
+  color: white;
+  font-size: 11px;
+  padding: 4px;
+  border-radius: 2px;
+}
+
+/* buttons */
+.back-btn{
+  margin-top: 16px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  border: 2px solid $primary;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.submit-btn{
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  padding-right: 15px; 
+  border: 2px solid $primary;
+  color: white;
+  background-color: $primary;
+  border-radius: 5px;
+}
