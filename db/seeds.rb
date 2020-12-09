@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 puts "Deleting all data..."
 Job.destroy_all
 Message.destroy_all
@@ -277,4 +278,5 @@ reviews << Review.create!(
   user: victoria
   )
 
-puts "Created jobs!"
+puts "Created reviews!"
+
