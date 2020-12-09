@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 puts "Deleting all data..."
 Job.destroy_all
 Message.destroy_all

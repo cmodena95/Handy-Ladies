@@ -10,10 +10,21 @@ class User < ApplicationRecord
   has_many :handylady_jobs, class_name: 'Job', foreign_key: 'handylady_id'
 
   # Validations for User
+  # validates :name, :address, :bio, presence: true
+  # validates :bio, length: { minimum: 10 }
   validates :name, :address, :bio, :title, presence: true
   validates :bio, length: { minimum: 10 }
 
   def messages(user)
     Message.where(sender: self, receiver: user).or(Message.where(sender: user, receiver: self))
+  end
+
+  def self.handyladies
+    User.where(handylady: true)
+  end
+
+  def star_rating
+    rating = handylady_reviews.average(:star_rating) || 0
+    rating.to_i
   end
 end

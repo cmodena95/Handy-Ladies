@@ -1,7 +1,25 @@
 <div class="card-worker mt-3">
   <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bGFkeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" />
-  <div class="card-worker-infos flex-box" style="width: 100%;">
+  <div class="card-worker-infos flex-box">
     <div class="card-price">
+      <h3><%= worker.name %></h3>
+      <h3>60$</h3>
+    </div>
+
+    <div class="stars-and-info">
+      <div class="stars">
+        <% worker.star_rating.times do %>
+        <i class="fas fa-star"></i>
+        <% end %>
+      </div>
+
+      <div class="mt-2">
+        <p>3km from your place</p>
+        <% worker.skills.each do |skill| %>
+        <span class="label"><%= skill.name %></span>
+        <% end %>
+      </div>
+
     <% @workers.each do |t| %>
       <h3><%= t.name %></h3>
       <h3>60€/h</h3>
@@ -19,5 +37,3 @@
     <% end  %>
   </div>
 </div>
-
-<!--  <i class="fas fa-star"> * worker.star_rating.to_i %> -->

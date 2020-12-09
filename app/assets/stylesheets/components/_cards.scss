@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.card-worker {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  width: 350px;
+}
+
+.card-worker img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-worker h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #385A64;
+  margin: 0;
+}
+
+.card-worker p {
+  font-size: 13px;
+  color: #637C84;
+  margin-bottom: 0;
+}
+
+.card-worker .card-worker-infos {
+  padding: 16px;
+  width: 100%;
+}
+
+.label{
+  display: inline-block;
+  background-color: #FF4F5A;
+  font-size: 12px;
+  color: white;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.card-price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-price p {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  margin: 0;
+}
+
+.stars-and-info {
+  text-align: left !important;
+}
