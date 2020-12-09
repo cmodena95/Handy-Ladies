@@ -8,8 +8,17 @@ class User < ApplicationRecord
   has_many :skills, through: :user_skills
   has_many :customer_jobs, class_name: 'Job', foreign_key: 'customer_id'
   has_many :handylady_jobs, class_name: 'Job', foreign_key: 'handylady_id'
+  has_many :handylady_reviews, through: :handylady_jobs, class_name: "Review", source: :reviews
 
   def messages(user)
     Message.where(sender: self, receiver: user).or(Message.where(sender: user, receiver: self))
+  end
+
+  def self.handyladies
+    User.where(handylady: true)
+  end
+
+  def star_rating
+    handylady_reviews.average(:star_rating) || 0
   end
 end
