@@ -13,8 +13,8 @@ class User < ApplicationRecord
 
 
   # Validations for User
-  # validates :name, :address, :bio, presence: true
-  # validates :bio, length: { minimum: 10 }
+  # Validates :name, :address, :bio, presence: true
+  # Validates :bio, length: { minimum: 10 }
 
   def messages(user)
     Message.where(sender: self, receiver: user).or(Message.where(sender: user, receiver: self))
