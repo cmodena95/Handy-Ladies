@@ -63,7 +63,7 @@ name: "Amelia",
 address: "Carrer de Mallorca, 181, 08036 Barcelona",
 latitude: 41.3894736,
 longitude: 2.154232,
-bio: "Burned out trying to follow IKEA user manuals to assemble your new furniture? leave it to me, I can do it incredible fast. Hit me up! ",
+bio: "Burned out trying to follow IKEA user manuals to assemble your new furniture? leave it to me, I can do it incredible fast. Hit me up!",
 email: "amelia@gmail.com",
 password:"123456")
 
@@ -225,5 +225,51 @@ jobs << Job.create!(
   location: "Barcelona",
   skill: computer_technician
 )
-
 puts "completed"
+
+
+puts "creating new reviews"
+
+reviews = []
+reviews << Review.create!(
+  description: "All good, she solved it really fast. Highly recommended",
+  star_rating: 5,
+  user: norma,
+  job: jobs[0],
+  title: "Good job!"
+  )
+
+reviews << Review.create!(
+  description: "well done, I recommend her to my friends",
+  star_rating: 4,
+  user: natalie,
+  job: jobs[1],
+  title: "Well done",
+  )
+
+reviews << Review.create!(
+  description: "After few weeks of hard work my kitchen looks amazing now, thanks Valen!",
+  star_rating: 4,
+  user: natalie,
+  job: jobs[2],
+  title: "New kitchen",
+  )
+
+reviews << Review.create!(
+  description: "she's professional and honest, loved the final result",
+  star_rating: 4,
+  user: susan,
+  job: jobs[3],
+  title: "100% Recomended",
+  )
+
+reviews << Review.create!(
+  description: "My computer is working as a new now. Thanks Maggie!!",
+  star_rating: 5,
+  user: victoria,
+  job: jobs[4],
+  title: "Fast and cheap!",
+  )
+puts "completed"
+
+
