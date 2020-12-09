@@ -63,7 +63,7 @@ name: "Amelia",
 address: "Carrer de Mallorca, 181, 08036 Barcelona",
 latitude: 41.3894736,
 longitude: 2.154232,
-bio: "Burned out trying to follow IKEA user manuals to assemble your new furniture? leave it to me, I can do it incredible fast. Hit me up! ",
+bio: "Burned out trying to follow IKEA user manuals to assemble your new furniture? leave it to me, I can do it incredible fast. Hit me up!",
 email: "amelia@gmail.com",
 password:"123456")
 
@@ -278,4 +278,5 @@ reviews << Review.create!(
   )
 
 puts "Created reviews!"
+
 
