@@ -9,6 +9,10 @@ class User < ApplicationRecord
   has_many :customer_jobs, class_name: 'Job', foreign_key: 'customer_id'
   has_many :handylady_jobs, class_name: 'Job', foreign_key: 'handylady_id'
 
+  # Validations for User
+  validates :name, :address, :bio, :title, presence: true
+  validates :bio, length: { minimum: 10 }
+
   def messages(user)
     Message.where(sender: self, receiver: user).or(Message.where(sender: user, receiver: self))
   end
