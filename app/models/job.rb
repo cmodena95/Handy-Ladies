@@ -2,8 +2,8 @@ class Job < ApplicationRecord
   belongs_to :skill
   belongs_to :customer, class_name: 'User'
   belongs_to :handylady, class_name: 'User'
-  has_many :reviews, dependent: :destroy
-  has_many :payments, dependent: :destroy
+  has_many :reviews
+  has_many :payments
 
   # Validations for Job
   validates :location, :date, :description, :title, presence: true

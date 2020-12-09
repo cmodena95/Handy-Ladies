@@ -171,7 +171,7 @@ puts "completed"
 
 puts "creating new jobs"
 jobs  = []
-jobs << Job.create!(
+job1 = Job.create!(
   customer: norma,
   handylady: sophia,
   date: Date.tomorrow,
@@ -181,8 +181,9 @@ jobs << Job.create!(
   location: "Barcelona",
   skill: electrical_technician
 )
+jobs << job1
 
-jobs << Job.create!(
+job2 = Job.create!(
   customer: natalie,
   handylady: grace,
   date: Date.tomorrow,
@@ -192,8 +193,9 @@ jobs << Job.create!(
   location: "Barcelona",
   skill: carpenter
 )
+jobs << job2
 
-jobs << Job.create!(
+job3 = Job.create!(
   customer: katty,
   handylady: valentina,
   date: Date.tomorrow,
@@ -203,8 +205,9 @@ jobs << Job.create!(
   location: "Barcelona",
   skill: bricklayer
 )
+jobs << job3
 
-jobs << Job.create!(
+job4 = Job.create!(
   customer: susan,
   handylady: juliet,
   date: Date.tomorrow,
@@ -214,16 +217,65 @@ jobs << Job.create!(
   location: "Barcelona",
   skill: painter
 )
+jobs << job4
 
-jobs << Job.create!(
+job5 = Job.create!(
   customer: victoria,
   handylady: maggie,
   date: Date.tomorrow,
-  description: "It's making a wird noice and the screen is black",
+  description: "It's making a weird noise and the screen is black",
   status: "pending",
   title: "My laptop doesn't turn on",
   location: "Barcelona",
   skill: computer_technician
 )
+jobs << job5
 
 puts "completed"
+
+puts "Creating reviews..."
+
+reviews = []
+
+reviews << Review.create!(
+  title: 'Great job',
+  description: "Couldn't fix it but gave me a hand in selling it on the black market",
+  star_rating: 4,
+  job: job1,
+  user: maggie
+  )
+
+reviews << Review.create!(
+  title: 'Terrible, perhaps even a thief',
+  description: "Didn't complete the task, just came into my house and took all the canned food from the cupboards",
+  star_rating: 1,
+  job: job2,
+  user: amelia
+  )
+
+reviews << Review.create!(
+  title: "So good I could cry",
+  description: "My kitchen is now so big I got lost in it for 4 hours and had to call the fire service for rescue; just what I had envisioned.",
+  star_rating: 5,
+  job: job3,
+  user: melissa
+  )
+
+reviews << Review.create!(
+  title: "Fantastic",
+  description: "Drawers work great now. I can fit my whole family in them; perfect for the impending nuclear apocalypse.",
+  star_rating: 5,
+  job: job4,
+  user: selena
+  )
+
+reviews << Review.create!(
+  title: "Very happy",
+  description: "Completely satisfied with the fixture. My 90-year-old grandma was previously very lazy and a massive financial burden but finally she works again.",
+  star_rating: 5,
+  job: job5,
+  user: victoria
+  )
+
+puts "Created reviews!"
+
