@@ -56,6 +56,10 @@
 .card-price p {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   margin: 0;
+}
+
+.stars-and-info {
+  text-align: left !important;
 }

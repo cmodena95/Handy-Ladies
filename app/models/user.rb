@@ -11,8 +11,8 @@ class User < ApplicationRecord
   has_many :handylady_reviews, through: :handylady_jobs, class_name: "Review", source: :reviews
 
   # Validations for User
-  validates :name, :address, :bio, presence: true
-  validates :bio, length: { minimum: 10 }
+  # validates :name, :address, :bio, presence: true
+  # validates :bio, length: { minimum: 10 }
 
   def messages(user)
     Message.where(sender: self, receiver: user).or(Message.where(sender: user, receiver: self))
@@ -23,6 +23,7 @@ class User < ApplicationRecord
   end
 
   def star_rating
-    handylady_reviews.average(:star_rating) || 0
+    rating = handylady_reviews.average(:star_rating) || 0
+    rating.to_i
   end
 end
