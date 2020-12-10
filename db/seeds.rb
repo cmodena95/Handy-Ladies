@@ -487,7 +487,7 @@ us11 = UserSkill.create!(
 us12 = UserSkill.create!(
   price: 20,
   user: louisa,
-  job: appliance_repair
+  skill: appliance_repair
   )
 
 us13 = UserSkill.create!(
