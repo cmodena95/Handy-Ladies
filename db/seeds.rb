@@ -18,6 +18,7 @@ norma = User.create!(
   email: "norma@gmail.com",
   password: "123456",
   handylady: true,
+  # price_per_hour: "60€/h"
   available_until: Time.now.advance(hour: 3)
 )
 
