@@ -166,6 +166,9 @@ sophia.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 sophia.save!
 
 file = URI.open('https://www.electriciancareersguide.com/wp-content/uploads/2016/09/Female-Electricians-9202016.png')
+# this didn't work
+# file = URI.open('https://lh3.googleusercontent.com/proxy/tmU7HLXNjiOp2Rp04Acyuta1p9rIBc5oFgUv6PwnIQRKMKaYcuQn6XUSpkJ7ZTEXX8vQnc9OaCcg7yXoFqGYYqiKmL3j-cORdGfLv-Z74IBY3kRyCQ6cb65uVXyMdlIzlo3DhesI84YKjcQySQ')
+# copied from 185
 grace = User.new(
 name: "Grace",
 address: "Barcelona, Spain",
@@ -293,7 +296,7 @@ computer_technician = Skill.create!(name: 'Computer technician')
 cleaning = Skill.create!(name: 'Cleaning')
 decor = Skill.create!(name: 'Decor')
 electrical_technician = Skill.create!(name: 'Electrical technician')
-gardering = Skill.create!(name: 'Gardering')
+gardening = Skill.create!(name: 'Gardening')
 minor_home_repair= Skill.create!(name: 'Minor Home repair')
 moving = Skill.create!(name: 'Moving')
 painter = Skill.create!(name: 'Painter')

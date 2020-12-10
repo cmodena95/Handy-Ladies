@@ -1,10 +1,10 @@
 <div class="card-worker mt-3">
-  <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bGFkeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" />
+  <%= cl_image_tag(worker.photo.key, width: 120, height: 200, crop: :fill) %>
   <div class="card-worker-infos flex-box">
     <div class="card-price">
       <h3><%= worker.name %></h3>
       <!-- need to do the price -->
-      <h3>60$</h3>
+      <h3>From <%= worker.hourly_price %>$</h3>
     </div>
 
     <div class="stars-and-info">
