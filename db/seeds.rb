@@ -164,8 +164,10 @@ available_until: Time.now.advance(hour: 3)
 )
 sophia.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 sophia.save!
-
-file = URI.open('https://lh3.googleusercontent.com/proxy/tmU7HLXNjiOp2Rp04Acyuta1p9rIBc5oFgUv6PwnIQRKMKaYcuQn6XUSpkJ7ZTEXX8vQnc9OaCcg7yXoFqGYYqiKmL3j-cORdGfLv-Z74IBY3kRyCQ6cb65uVXyMdlIzlo3DhesI84YKjcQySQ')
+# this didn't work
+# file = URI.open('https://lh3.googleusercontent.com/proxy/tmU7HLXNjiOp2Rp04Acyuta1p9rIBc5oFgUv6PwnIQRKMKaYcuQn6XUSpkJ7ZTEXX8vQnc9OaCcg7yXoFqGYYqiKmL3j-cORdGfLv-Z74IBY3kRyCQ6cb65uVXyMdlIzlo3DhesI84YKjcQySQ')
+file = URI.open('https://assets.blog.hgtv.ca/wp-content/uploads/2019/02/28204624/alison-victoria-the-women-of-hgtv.jpg?width=435')
+# copied from 185
 grace = User.new(
 name: "Grace",
 address: "Barcelona, Spain",
@@ -241,7 +243,7 @@ available_until: Time.now.advance(hour: 3)
 nina.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 nina.save!
 
-file = URI.open()
+file = URI.open('https://thehousepainters.com/wp-content/uploads/2014/07/thp-12.png')
 melissa = User.new(
 name: "Melissa",
 address: "Barcelona, Spain",
@@ -293,7 +295,7 @@ computer_technician = Skill.create!(name: 'Computer technician')
 cleaning = Skill.create!(name: 'Cleaning')
 decor = Skill.create!(name: 'Decor')
 electrical_technician = Skill.create!(name: 'Electrical technician')
-gardering = Skill.create!(name: 'Gardering')
+gardening = Skill.create!(name: 'Gardening')
 minor_home_repair= Skill.create!(name: 'Minor Home repair')
 moving = Skill.create!(name: 'Moving')
 painter = Skill.create!(name: 'Painter')
