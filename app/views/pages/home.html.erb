@@ -60,13 +60,11 @@
       <%= select_tag :query,
         options_from_collection_for_select(Skill.all, "id", "name"),
         class: "form-control",
-        placeholder: "Search by skill..."
+        placeholder: "Select by skill..."
       %>
       <%= submit_tag "Search!", class: "btn btn-primary" %>
     <% end %>
   </div>
-
-
 
 
 </div>
