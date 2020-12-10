@@ -241,7 +241,7 @@ available_until: Time.now.advance(hour: 3)
 nina.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 nina.save!
 
-file = URI.open('https://previews.123rf.com/images/titco/titco1906/titco190600026/124032829-wooden-parquet-texture-wood-floor-background.jpg')
+file = URI.open('https://thehousepainters.com/wp-content/uploads/2014/07/thp-12.png')
 melissa = User.new(
 name: "Melissa",
 address: "Barcelona, Spain",
@@ -293,7 +293,7 @@ computer_technician = Skill.create!(name: 'Computer technician')
 cleaning = Skill.create!(name: 'Cleaning')
 decor = Skill.create!(name: 'Decor')
 electrical_technician = Skill.create!(name: 'Electrical technician')
-gardering = Skill.create!(name: 'Gardering')
+gardening = Skill.create!(name: 'Gardening')
 minor_home_repair= Skill.create!(name: 'Minor Home repair')
 moving = Skill.create!(name: 'Moving')
 painter = Skill.create!(name: 'Painter')
