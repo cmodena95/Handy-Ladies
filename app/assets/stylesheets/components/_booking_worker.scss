@@ -1,0 +1,38 @@
+/* containers */
+.booking-container{
+  margin-top: 30px;
+  width: 100%;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-name {
+  flex-grow: 1;
+  margin-right: 16px;
+  line-height: 0.1;
+}
+
+.profile-name > h1 {
+  padding-top: 32px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #253F47;
+}
+
+/* Avatar */
+
+.avatar-container{
+  width: 100px;
+  margin-right: 16px;
+  margin-top: 16px;
+}
+
+/* skills */
+
+.skills-container{
+  width: auto;
+}
+

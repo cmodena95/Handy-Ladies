@@ -1,0 +1,29 @@
+<div class="booking-container">
+  <div class="profile-header">
+    <div class="profile-name">
+      <h1>Book <%= @worker.name %></h1>
+      <p>60€ / h</p> 
+    </div>
+
+      <img  class="card-avatar-bigger" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="">
+
+  </div>
+  <div class="skills-container">
+  <% @worker.skills.each do |skill| %>
+    <span class="pill"><%= skill.name %></span>
+  <% end %>
+  </div> 
+  <%= simple_form_for [@worker, @job], url: worker_jobs_path, input_html: { class: 'form-group' } do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description, as: :text, label: 'Describe your problem' %>
+    <%= f.input :photo, as: :file, label: 'Upload an image' %>
+    <%= f.input :date, as: :date, label: 'Select date' %>
+    <%= f.input :location, label: 'Address' %>
+    <div class="form-buttons">
+      <%= link_to "< BACK", worker_path(params[:worker_id]), class: "button" %>
+      <%= f.submit 'SEND REQUEST', class: 'button button-primary submit-btn' %>
+    </div>
+  <% end %>
+</div>
+
+
