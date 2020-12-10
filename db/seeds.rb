@@ -11,7 +11,7 @@ puts "completed"
 
 puts "Creating users..."
 
-file = URI.open()
+file = URI.open('https://www.nj.com/resizer/409Xx92tbn63vR-SDZtKLY4HLJA=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.nj.com/home/njo-media/width2048/img/centraljersey_impact/photo/photo---brittany-using-her-carpentry-tooljpg-fae9f0b3396abdb3.jpg')
 norma = User.new(
   name: "Norma",
   address: "Barcelona, Spain",
@@ -26,7 +26,7 @@ norma = User.new(
 norma.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 norma.save!
 
-file = URI.open()
+file = URI.open('https://www.theplumbette.com.au/wp-content/uploads/2016/02/5-things-you-need-to-succeed-as-a-female-plumber1jpg.jpg')
 louisa = User.new(
   name: "Louisa",
   address: "Madrid, Spain",
@@ -41,7 +41,7 @@ louisa = User.new(
 louisa.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 louisa.save!
 
-file = URI.open()
+file = URI.open('https://www.bournemouthecho.co.uk/resources/images/2891837/?type=responsive-gallery')
 francis = User.new(
   name: "Francis",
   address: "Madrid, Spain",
@@ -56,7 +56,7 @@ francis = User.new(
 francis.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 francis.save!
 
-file = URI.open()
+file = URI.open('https://i0.wp.com/www.middleeastmonitor.com/wp-content/uploads/2018/12/2018_12-17-gaza-women-carpenter2.jpg?quality=85&strip=all&zoom=1&ssl=1')
 beth = User.new(
   name: "Beth",
   address: "Sitges, Spain",
@@ -71,7 +71,7 @@ beth = User.new(
 beth.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 beth.save!
 
-file = URI.open()
+file = URI.open('https://i1.wp.com/mvslim.com/wp-content/uploads/2018/01/jordanfemaleplumbers.jpg?fit=1200%2C601&ssl=1')
 natalie = User.new(
 name: "Natalie",
 address: "Barcelona, Spain",
@@ -86,7 +86,7 @@ available_until: Time.now.advance(hour: 3)
 natalie.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 natalie.save!
 
-file = URI.open()
+file = URI.open('https://broadly-images.vice.com/images/articles/meta/2015/11/03/hauling-ass-with-an-all-female-moving-company-1446559688.jpg?crop=1xw:0.75xh;center,center')
 katty = User.new(
 name: "Katty",
 address: "Barcelona, Spain",
@@ -101,7 +101,7 @@ available_until: Time.now.advance(hour: 3)
 katty.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 katty.save!
 
-file = URI.open()
+file = URI.open('https://photo.mybuilder.com/2_thumb/12693555_6089462d92.jpg')
 susan = User.new(
 name: "Susan",
 address: "Barcelona, Spain",
@@ -116,7 +116,7 @@ available_until: Time.now.advance(hour: 3)
 susan.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 susan.save!
 
-file = URI.open()
+file = URI.open('https://st3.depositphotos.com/13323428/16258/v/600/depositphotos_162587066-stock-video-young-female-gardener-watering-plants.jpg')
 olivia = User.new(
 name: "Olivia",
 address: "Barcelona, Spain",
@@ -132,7 +132,7 @@ available_until: Time.now.advance(hour: 3)
 olivia.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 olivia.save!
 
-file = URI.open()
+file = URI.open('https://blog.servicemarket.com/wp-content/uploads/2018/08/Furniture-assembly-Cant-make-head-or-tails-of-it.jpg')
 amelia = User.new(
 name: "Amelia",
 address: "Barcelona, Spain",
@@ -147,7 +147,7 @@ available_until: Time.now.advance(hour: 3)
 amelia.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 amelia.save!
 
-file = URI.open()
+file = URI.open('https://www.electriciancareersguide.com/wp-content/uploads/2016/09/Female-Electricians-9202016.png')
 sophia = User.new(
 name: "Sophia",
 address: "Barcelona, Spain",
@@ -162,7 +162,7 @@ available_until: Time.now.advance(hour: 3)
 sophia.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 sophia.save!
 
-file = URI.open()
+file = URI.open('https://lh3.googleusercontent.com/proxy/tmU7HLXNjiOp2Rp04Acyuta1p9rIBc5oFgUv6PwnIQRKMKaYcuQn6XUSpkJ7ZTEXX8vQnc9OaCcg7yXoFqGYYqiKmL3j-cORdGfLv-Z74IBY3kRyCQ6cb65uVXyMdlIzlo3DhesI84YKjcQySQ')
 grace = User.new(
 name: "Grace",
 address: "Barcelona, Spain",
@@ -177,7 +177,7 @@ available_until: Time.now.advance(hour: 3)
 grace.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 grace.save!
 
-file = URI.open()
+file = URI.open('https://assets.blog.hgtv.ca/wp-content/uploads/2019/02/28204624/alison-victoria-the-women-of-hgtv.jpg?width=435')
 valentina = User.new(
 name: "Valentina",
 address: "Barcelona, Spain",
@@ -192,7 +192,7 @@ available_until: Time.now.advance(hour: 3)
 valentina.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 valentina.save!
 
-file = URI.open()
+file = URI.open('https://www.iberian-escapes.com/images/housekeeping.jpg')
 juliet = User.new(
 name: "Juliet",
 address: "Barcelona, Spain",
@@ -207,7 +207,7 @@ available_until: Time.now.advance(hour: 3)
 juliet.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 juliet.save!
 
-file = URI.open()
+file = URI.open('https://thumbs.dreamstime.com/b/woman-technician-fixing-computer-87666573.jpg')
 maggie = User.new(
 name: "Maggie",
 address: "Barcelona, Spain",
@@ -223,7 +223,7 @@ available_until: Time.now.advance(hour: 3)
 maggie.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 maggie.save!
 
-file = URI.open()
+file = URI.open('https://previews.123rf.com/images/titco/titco1906/titco190600026/124032829-wooden-parquet-texture-wood-floor-background.jpg')
 nina = User.new(
 name: "Nina",
 address: "Barcelona, Spain",
@@ -253,7 +253,7 @@ available_until: Time.now.advance(hour: 3)
 melissa.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 melissa.save!
 
-file = URI.open()
+file = URI.open('https://thehousepainters.com/wp-content/uploads/2014/07/thp-12.png')
 selena = User.new(
 name: "Selena",
 address: "Barcelona, Spain",
@@ -268,7 +268,7 @@ available_until: Time.now.advance(hour: 3)
 selena.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 selena.save!
 
-file = URI.open()
+file = URI.open('https://static01.nyt.com/images/2019/11/17/books/review/17Salam/Salam1-superJumbo.jpg')
 victoria = User.new(
 name: "Victoria",
 address: "Barcelona, Spain",
@@ -372,7 +372,7 @@ reviews << Review.create!(
   description: "Couldn't fix it but gave me a hand in selling it on the black market",
   star_rating: 4,
   job: job1,
-  user: maggie
+  user: norma
   )
 
 reviews << Review.create!(
