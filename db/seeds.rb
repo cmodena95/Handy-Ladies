@@ -29,7 +29,8 @@ latitude: 41.3980417,
 longitude: 2.1724029,
 bio:"Hey there! here I am, the best plumber in town, don't get stuck (like the sink is)  and book an appointment with me to solve it ",
 email: "natalie@gmail.com",
-password:"123456")
+password:"123456"
+)
 
 katty = User.create!(
 name: "Katty",
