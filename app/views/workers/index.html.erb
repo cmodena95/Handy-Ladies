@@ -1,6 +1,10 @@
-<h2><span style="color:#FFAAAF">Ladies</span> who match your criteria</h2>
-<div class="container">
+<h2 class="text-center"><span style="color:#FFAAAF">Ladies</span> who match your criteria</h2>
+<div class="container d-flex flex-column justify-content-center">
   <% @workers.each do |worker| %>
-    <%= render "worker_card", worker: worker %>
+    <%= link_to worker_path(worker), class: "d-flex justify-content-center" do %>
+      <%= render "worker_card", worker: worker %>
+    <% end %>
   <% end %>
 </div>
+
+

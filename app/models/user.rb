@@ -25,6 +25,10 @@ class User < ApplicationRecord
     User.where(handylady: true)
   end
 
+  def hourly_price
+    user_skills.minimum(:price) || 0
+  end
+
   def star_rating
     rating = handylady_reviews.average(:star_rating) || 0
     rating.to_i
