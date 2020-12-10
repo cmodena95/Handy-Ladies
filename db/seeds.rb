@@ -1,11 +1,13 @@
 require "open-uri"
 
 puts "Deleting all data..."
+Review.destroy_all
 Job.destroy_all
 Message.destroy_all
 Payment.destroy_all
 User.destroy_all
 Skill.destroy_all
+UserSkill.destroy_all
 
 puts "completed"
 
