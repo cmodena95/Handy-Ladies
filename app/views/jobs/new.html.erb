@@ -17,7 +17,6 @@
     <%= f.input :title %>
     <%= f.input :description, as: :text, label: 'Describe your problem' %>
     <%= f.input :photo, as: :file, label: 'Upload an image' %>
-    <%= f.association :skill, collection: @worker.skills %>
     <%= f.input :date, as: :date, label: 'Select date' %>
     <%= f.input :location, label: 'Address' %>
     <div class="form-buttons">
