@@ -23,6 +23,7 @@ norma = User.new(
   email: "norma@gmail.com",
   password: "123456",
   handylady: true,
+  # price_per_hour: "60€/h"
   available_until: Time.now.advance(hour: 3)
 )
 norma.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')

@@ -1,0 +1,27 @@
+<div class="booking-container">
+  <div class="booking-profile-container flex-container">
+    <div class="booking-info ">
+      <h1>Book Maria</h1>
+      <p>60€ / h</p> 
+    </div>
+    <div class="avatar-container">
+        <div class="card-avatar booking-avatar"></div>
+    </div>
+  </div>
+  <div class="skills-container">
+    <span class="skill">Painter</span> 
+  </div>
+  <%= simple_form_for [@worker, @job], url: worker_jobs_path, input_html: { class: 'form-group' } do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description, as: :text, label: 'Describe your problem' %>
+    <%= f.input :photo, as: :file, label: 'Upload an image' %>
+    <%= f.input :date, as: :date, label: 'Select date' %>
+    <%= f.input :location, label: 'Address' %>
+    <div class="text-center">
+      <%= link_to "< BACK", worker_path(params[:worker_id]), class: "back-btn" %>
+      <%= f.submit 'SEND REQUEST', class: 'submit-btn' %>
+    </div>
+  <% end %>
+</div>
+
+
