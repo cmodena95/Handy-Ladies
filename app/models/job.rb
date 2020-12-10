@@ -4,12 +4,14 @@ class Job < ApplicationRecord
   belongs_to :handylady, class_name: 'User'
   has_many :reviews
   has_many :payments
+  has_many_attached :photos
 
   # Validations for Job
   validates :location, :date, :description, :title, presence: true
   validates :description, length: { minimum: 10, maximum: 1000 }
   validates :title, length: { minimum: 5 }
   validate :date_cannot_be_in_the_past
+  validates :photos, presence: true
 
   def date_cannot_be_in_the_past
     if date.present? && date < Date.today
