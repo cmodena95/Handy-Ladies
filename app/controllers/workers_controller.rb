@@ -5,5 +5,9 @@ class WorkersController < ApplicationController
 
   def index
     @workers = User.handyladies
+
+    if params[:query]
+      @workers = @workers.joins(:user_skills).where(user_skills: {skill_id: params[:query]})
+    end
   end
 end
