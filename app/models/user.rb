@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :skills, through: :user_skills
   has_many :customer_jobs, class_name: 'Job', foreign_key: 'customer_id'
   has_many :handylady_jobs, class_name: 'Job', foreign_key: 'handylady_id'
-  
+
   has_many :handylady_reviews, class_name: 'Review', through: :handylady_jobs, source: :reviews
 
 

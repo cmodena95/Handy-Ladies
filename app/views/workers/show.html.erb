@@ -2,27 +2,29 @@
   <div class="d-flex justify-content-between mt-4">
     <div>
       <h1 class="p-0 m-0">Hi, I'm <%= @user.name %></h1>
-      <p>Joined in january, 2020</p>
+      <p>Joined in <%= @user.created_at.strftime("%B, %Y") %></p>
     </div>
 
+    <%# we should have a profile picture for each user. %>
     <img class="avatar card-avatar-bigger" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" alt="Blond woman">
   </div>
 
   <div class="pt-3 pb-4">
     <h4>Identity verified</h4>
     <h4><%= @user.handylady_reviews.length %> reviews</h4>
+    <%# each handy lady should have a price per hour. %>
     <h4>60€/h</h4>
   </div>
 
   <div class="pb-3 mr-3 mt-2">
     <h2>About</h2>
     <p><%= @user.bio %></p>
-    <%# people, the address in the seed should be just the city name, just like Figma. %>
     <h4>Lives in <%= @user.address %></h4>
   </div>
 
   <div class="d-flex mb-5">
-    <%= @user.user_skills.each do |skill| %>
+    <% @user.skills.each do |skill| %>
+      <%# each handy lady should have at least one skill. %>
       <div class="pill"><%= skill.name %></div>
     <% end %>
   </div>
@@ -31,9 +33,10 @@
     <h2><%= @user.name %>'s reviews <%= @user.star_rating %>/5</h2>
   </div>
   
-  <%= @user.handylady_reviews.each do |review| %>
+  <% @user.handylady_reviews.each do |review| %>
     <div class="reviews d-flex">
       <div class="avatar mr-4">
+        <%# each user should have a picture which appears in the review. %>
         <img class="card-avatar" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" alt="Blond woman">
       </div>
 
@@ -41,15 +44,14 @@
         <div>
           <h3><%= review.description %></h3>
           <div class="stars d-flex">
-            <% worker.star_rating.times do %>
+            <% review.star_rating.times do %>
               <i class="fas fa-star"></i>
             <% end %>
 
-            <%= (5 - worker.star_rating).times do %>
-              <i class="fal fa-star"></i>
+            <% (5 - review.star_rating).times do %>
+              <i class="far fa-star"></i>
             <% end %>
           </div>
-          <%# should we think about implementing the date of the review in the data base? %>
           <p><%= review.user.name %> on 23th Feb 2019</p>
         </div>
       </div>
@@ -58,11 +60,11 @@
 
 
   <div class="works mt-5">
-    <h2><%= @user.name %> works</h2>
+    <h2><%= @user.name %>'s jobs</h2>
     <div class="portfolio d-flex">
-      <%= @user.handylady_jobs.each do |job| %>
+      <% @user.handylady_jobs.each do |job| %>
         <div class="picture">
-          <img src="<%= job.picture %>">
+          <%# image_tag %>
         </div>
       <% end %>
     </div>
