@@ -164,10 +164,8 @@ available_until: Time.now.advance(hour: 3)
 )
 sophia.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 sophia.save!
-# this didn't work
-# file = URI.open('https://lh3.googleusercontent.com/proxy/tmU7HLXNjiOp2Rp04Acyuta1p9rIBc5oFgUv6PwnIQRKMKaYcuQn6XUSpkJ7ZTEXX8vQnc9OaCcg7yXoFqGYYqiKmL3j-cORdGfLv-Z74IBY3kRyCQ6cb65uVXyMdlIzlo3DhesI84YKjcQySQ')
-file = URI.open('https://assets.blog.hgtv.ca/wp-content/uploads/2019/02/28204624/alison-victoria-the-women-of-hgtv.jpg?width=435')
-# copied from 185
+
+file = URI.open('https://www.electriciancareersguide.com/wp-content/uploads/2016/09/Female-Electricians-9202016.png')
 grace = User.new(
 name: "Grace",
 address: "Barcelona, Spain",
@@ -467,7 +465,7 @@ us6 = UserSkill.create!(
 us7 = UserSkill.create!(
   price: 20,
   user: louisa,
-  skill: gardening
+  skill: gardering
   )
 
 us8 = UserSkill.create!(
@@ -497,7 +495,7 @@ us11 = UserSkill.create!(
 us12 = UserSkill.create!(
   price: 20,
   user: louisa,
-  job: appliance_repair
+  skill: appliance_repair
   )
 
 us13 = UserSkill.create!(
@@ -539,7 +537,7 @@ us16 = UserSkill.create!(
 us17 = UserSkill.create!(
   price: 30,
   user: olivia,
-  skill: gardening
+  skill: gardering
   )
 
 us18 = UserSkill.create!(
