@@ -11,7 +11,7 @@ puts "Creating users..."
 
 norma = User.create!(
   name: "Norma",
-  address: "Carrer de Sant Antoni Maria Claret, 192, 08025 Barcelona",
+  address: "Barcelona, Spain",
   latitude: 41.4098557,
   longitude: 2.1640075,
   bio: "I'm able to help you out with any carpenter job or wood repair you need, don't hesitate to contact me",
@@ -21,9 +21,45 @@ norma = User.create!(
   available_until: Time.now.advance(hour: 3)
 )
 
+louisa = User.create!(
+  name: "Louisa",
+  address: "Madrid, Spain",
+  latitude: 40.4168,
+  longitude: 3.7038,
+  bio: "I know everything there is to know about sinks. Sinks are my life.",
+  email: "louisa@gmail.com",
+  password: "123456",
+  handylady: true,
+  available_until: Time.now.advance(hour: 3)
+)
+
+francis = User.create!(
+  name: "Francis",
+  address: "Madrid, Spain",
+  latitude: 40.4168,
+  longitude: 3.7038,
+  bio: "My husband is actually a bathroom tile so I've had a lot of experience with tiling. It was awkward when I first realised this 3 years into our marriage, but it ended up giving me a lot of practice.",
+  email: "francis@gmail.com",
+  password: "123456",
+  handylady: true,
+  available_until: Time.now.advance(hour: 3)
+)
+
+beth = User.create!(
+  name: "Beth",
+  address: "Sitges, Spain",
+  latitude: 41.2372,
+  longitude: 1.8059,
+  bio: "10 years working in carpentry. Constructed a whole table from scratch without any equipment or materials while sat on top of it.",
+  email: "beth@gmail.com",
+  password: "123456",
+  handylady: true,
+  available_until: Time.now.advance(hour: 3)
+)
+
 natalie = User.create!(
 name: "Natalie",
-address: "Carrer del Consell de Cent, 445, 08013 Barcelona, España",
+address: "Barcelona, Spain",
 latitude: 41.3980417,
 longitude: 2.1724029,
 bio:"Hey there! here I am, the best plumber in town, don't get stuck (like the sink is)  and book an appointment with me to solve it ",
@@ -32,7 +68,7 @@ password:"123456")
 
 katty = User.create!(
 name: "Katty",
-address: "Via Augusta, 268, 08017 Barcelona",
+address: "Barcelona, Spain",
 latitude: 41.3980379,
 longitude: 2.1293558,
 bio: "Hello girls, I'm offering my professional service of moving, medium stuffs like furnitures, plants, boxes and everything that could fit in my van.  I can go anywhere",
@@ -41,7 +77,7 @@ password:"123456")
 
 susan = User.create!(
 name: "Susan",
-address: "Carrer de Pelai, 5, 08001 Barcelona",
+address: "Barcelona, Spain",
 latitude: 41.385906,
 longitude: 2.1639056,
 bio: "Hello everyone! I have several years of experience painting houses, text me to talk about the project you have in mind =)",
@@ -50,7 +86,7 @@ password:"123456")
 
 olivia = User.create!(
 name: "Olivia",
-address: "Carrer de la Indústria, 241, 08041 Barcelona",
+address: "Barcelona, Spain",
 latitude: 41.4127396,
 longitude: 2.1761666,
 bio: "Hi, I'm Olivia, owner of a small gardening company where all the workers are women we believe in female empowerment and we work for it,
@@ -60,7 +96,7 @@ password:"123456")
 
 amelia = User.create!(
 name: "Amelia",
-address: "Carrer de Mallorca, 181, 08036 Barcelona",
+address: "Barcelona, Spain",
 latitude: 41.3894736,
 longitude: 2.154232,
 bio: "Burned out trying to follow IKEA user manuals to assemble your new furniture? leave it to me, I can do it incredible fast. Hit me up!",
@@ -69,7 +105,7 @@ password:"123456")
 
 sophia = User.create!(
 name: "Sophia",
-address: "Carrer de Ca l'Alegre de Dalt, 9, 08024 Barcelona",
+address: "Barcelona, Spain",
 latitude: 41.4072125,
 longitude: 2.1606342,
 bio: "Stop searching! the electrical technician you were looking for is here! I`am Sophia and I have a long experience in electricians duties. Check my reviews, all happy customers. DM me!",
@@ -78,7 +114,7 @@ password:"123456")
 
 grace = User.create!(
 name: "Grace",
-address: "Carrer de Còrsega, 417, 08037 Barcelona",
+address: "Barcelona, Spain",
 latitude: 41.4020812,
 longitude: 2.156101,
 bio: "* Carpenter * Bricklayer * Painter Bests rates reviews in Handyladies app, don't hesitate to contact me",
@@ -87,7 +123,7 @@ password:"123456")
 
 valentina = User.create!(
 name: "Valentina",
-address: "Carrer dels Assaonadors, 19, 08003 Barcelona",
+address: "Barcelona, Spain",
 latitude: 41.3835446,
 longitude: 2.1805807,
 bio: "Thinking of doing a home renovation? you are in the right profile, DM me to make it real",
@@ -96,7 +132,7 @@ password:"123456")
 
 juliet = User.create!(
 name: "Juliet",
-address: "C. del Consell de Cent, 519, 08013 Barcelona",
+address: "Barcelona, Spain",
 latitude: 41.4033903,
 longitude: 2.1851643,
 bio: "Hi there, this is Juliet and I'm able to do housekeeping around Barcelona city center for the best price you can find. Let's try? ",
@@ -105,7 +141,7 @@ password:"123456")
 
 maggie = User.create!(
 name: "Maggie",
-address: "Carrer de Roger de Flor, 262, 08025 Barcelona",
+address: "Barcelona, Spain",
 latitude: 41.4036582,
 longitude: 2.1696618,
 bio: "Problems with your laptop or pc? wifi doesn't work properly and you already tried everything?
@@ -116,7 +152,7 @@ password:"123456")
 
 nina = User.create!(
 name: "Nina",
-address: "Rambla de Catalunya, 64, 08007 Barcelona",
+address: "Barcelona, Spain",
 latitude: 41.388616,
 longitude: 2.1626232,
 bio: "restoration of wooden floors with the best technique. Let me know to create a budget",
@@ -125,7 +161,7 @@ password:"123456")
 
 melissa = User.create!(
 name: "Melissa",
-address: "Carrer de Còrsega, 226, Ent 2ª, 08036 Barcelona",
+address: "Barcelona, Spain",
 latitude: 41.3899532,
 longitude: 2.1513699,
 bio: "Need help with home decoration? I can do that for you",
@@ -135,7 +171,7 @@ password:"123456")
 
 selena = User.create!(
 name: "Selena",
-address: "Carrer de Balmes, 12, 08007 Barcelona",
+address: "Barcelona, Spain",
 latitude: 41.387806,
 longitude: 2.160864,
 bio:  "Looking for some home renovation? You are in the best painter profile in Handy Ladies, we have hundred of happy customers  with the job done. Want to know more? text me ",
@@ -144,7 +180,7 @@ password:"123456")
 
 victoria = User.create!(
 name: "Victoria",
-address: "C/ d'Aragó, 323, 325, 08009 Barcelona",
+address: "Barcelona, Spain",
 latitude: 41.3962504,
 longitude: 2.168011,
 bio: "Hello word! I have a plenty free time and also plenty love for dogs so I'm the right person to walk your dogs, daily, weekly or whenever you need text me to arrange a visit",
@@ -166,6 +202,7 @@ minor_home_repair= Skill.create!(name: 'Minor Home repair')
 moving = Skill.create!(name: 'Moving')
 painter = Skill.create!(name: 'Painter')
 plumber = Skill.create!(name: 'Plumber')
+tiler = Skill.create!(name: 'Tiler')
 
 puts "completed"
 
@@ -279,4 +316,96 @@ reviews << Review.create!(
 
 puts "Created reviews!"
 
+puts "Creating user skills..."
 
+user_skills = []
+
+us1 = UserSkill.create!(
+  price: 30,
+  user: norma,
+  skill: appliance_repair
+  )
+
+us2 = UserSkill.create!(
+  price: 20,
+  user: louisa,
+  skill: bricklayer
+  )
+
+us3 = UserSkill.create!(
+  price: 10,
+  user: francis,
+  skill: carpenter
+  )
+
+us4 = UserSkill.create!(
+  price: 50,
+  user: norma,
+  skill: carpenter
+  )
+
+us5 = UserSkill.create!(
+  price: 5,
+  user: beth,
+  skill: cleaning
+  )
+
+us6 = UserSkill.create!(
+  price: 30,
+  user: norma,
+  skill: computer_technician
+  )
+
+us7 = UserSkill.create!(
+  price: 20,
+  user: louisa,
+  skill: gardening
+  )
+
+us8 = UserSkill.create!(
+  price: 40,
+  user: francis,
+  skill: minor_home_repair
+  )
+
+us9 = UserSkill.create!(
+  price: 50,
+  user: louisa,
+  skill: plumber
+  )
+
+us10 = UserSkill.create!(
+  price: 5,
+  user: beth,
+  skill: painter
+  )
+
+us11 = UserSkill.create!(
+  price: 30,
+  user: norma,
+  skill: moving
+  )
+
+us12 = UserSkill.create!(
+  price: 20,
+  user: louisa,
+  job: appliance_repair
+  )
+
+us13 = UserSkill.create!(
+  price: 40,
+  user: francis,
+  skill: tiler
+  )
+
+us14 = UserSkill.create!(
+  price: 50,
+  user: francis,
+  skill: appliance_repair
+  )
+
+us15 = UserSkill.create!(
+  price: 5,
+  user: beth,
+  skill: carpenter
+  )
