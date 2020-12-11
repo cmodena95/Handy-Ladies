@@ -438,7 +438,7 @@ us1 = UserSkill.create!(
   )
 
 us5 = UserSkill.create!(
-  price: 5,
+  price: 15,
   user: beth,
   skill: cleaning
   )
@@ -450,19 +450,19 @@ us7 = UserSkill.create!(
 )
 
 us8 = UserSkill.create!(
-  price: 40,
+  price: 25,
   user: francis,
   skill: minor_home_repair
   )
 
 us9 = UserSkill.create!(
-  price: 50,
+  price: 35,
   user: louisa,
   skill: plumber
   )
 
 us10 = UserSkill.create!(
-  price: 5,
+  price: 30,
   user: beth,
   skill: painter
   )
@@ -492,19 +492,19 @@ us17 = UserSkill.create!(
   )
 
 us18 = UserSkill.create!(
-  price: 5,
+  price: 20,
   user: amelia,
   skill: moving
   )
 
 us19 = UserSkill.create!(
-  price: 5,
+  price: 25,
   user: sophia,
   skill: electrical_technician
   )
 
 us20 = UserSkill.create!(
-  price: 50,
+  price: 40,
   user: grace,
   skill: carpenter
   )
@@ -522,7 +522,7 @@ us22 = UserSkill.create!(
   )
 
 us23 = UserSkill.create!(
-  price: 50,
+  price: 45,
   user: valentina,
   skill: decor
   )
@@ -534,7 +534,7 @@ us24 = UserSkill.create!(
   )
 
 us25 = UserSkill.create!(
-  price: 50,
+  price: 35,
   user: maggie,
   skill: computer_technician
   )
