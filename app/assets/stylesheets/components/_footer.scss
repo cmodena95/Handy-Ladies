@@ -1,19 +1,22 @@
 .footer {
-  background-color: white;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  background:white;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
+  height: 75px;
   padding: 0px 50px;
   margin-top: 30px;
+  position: sticky;
+  bottom: 0;
 }
 
-.footer-link {
-
+.fa-search {
+  font-size: 28px;
 }
 
-.footer-link-middle {
-
+.fa-user-circle {
+  font-size: 28px;
 }
 
-
+.fa-comments {
+  font-size: 28px;
+}
