@@ -23,11 +23,13 @@
       </div>
     </div>
     <div class="homepage-circles-strip-inner">
-      <div class="homepage-circle-box">
-        <div class="homepage-circle">
-          Tiler
+      <%= link_to workers_path(query: "Tiler") do %>
+        <div class="homepage-circle-box">
+          <div class="homepage-circle">
+            Tiler
+          </div>
         </div>
-      </div>
+      <% end %>
       <div class="homepage-circle-box">
         <div class="homepage-circle center">
           <%= link_to "Other...", workers_path, class: "circle-links" %>

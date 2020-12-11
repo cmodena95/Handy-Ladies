@@ -315,7 +315,7 @@ job1 = Job.new(
   location: "Barcelona",
   skill: electrical_technician
 )
-job1.photo.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job1.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job1.save!
 
 file = URI.open('https://media-cdn.tripadvisor.com/media/photo-s/02/1f/8c/44/broken-wardrobe.jpg')
@@ -329,7 +329,7 @@ job2 = Job.create!(
   location: "Barcelona",
   skill: carpenter
 )
-job2.photo.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job2.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job2.save!
 
 file = URI.open('https://i.pinimg.com/originals/56/92/04/569204e0add79b718e74185e7d6d1799.jpg')
@@ -343,7 +343,7 @@ job3 = Job.create!(
   location: "Barcelona",
   skill: bricklayer
 )
-job3.photo.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job3.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job3.save!
 
 file = URI.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-672758146-1580979535.jpg?crop=0.639xw:1.00xh;0.284xw,0&resize=480:*')
@@ -357,7 +357,7 @@ job4 = Job.create!(
   location: "Barcelona",
   skill: painter
 )
-job4.photo.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job4.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job4.save!
 
 file = URI.open('https://i.pinimg.com/originals/72/41/62/7241627b27ddce6ecef70a48992dfccf.jpg')
@@ -371,7 +371,7 @@ job5 = Job.create!(
   location: "Barcelona",
   skill: computer_technician
 )
-job5.photo.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job5.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job5.save!
 
 puts "completed"
