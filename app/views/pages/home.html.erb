@@ -11,10 +11,10 @@
 
   <div class="homepage-circles-container">
     <div class="homepage-circles-strip-outer">
-      <%= link_to workers_path(query: "Electrician") do %>
+      <%= link_to workers_path(query: "Gardening") do %>
         <div class="homepage-circle-box">
           <div class="homepage-circle">
-            Electrician
+            Gardener
           </div>
         </div>
       <% end %>
@@ -55,11 +55,13 @@
         </div>
       </div>
       <% end %>
+      <%= link_to workers_path(query: "Plumber") do %>
       <div class="homepage-circle-box">
         <div class="homepage-circle">
           Plumber
         </div>
       </div>
+      <% end %>
     </div>
   </div>
 
