@@ -315,6 +315,7 @@ job1 = Job.new(
   location: "Barcelona",
   skill: electrical_technician
 )
+
 job1.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job1.save!
 
@@ -329,6 +330,7 @@ job2 = Job.create!(
   location: "Barcelona",
   skill: carpenter
 )
+
 job2.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job2.save!
 
@@ -343,6 +345,7 @@ job3 = Job.create!(
   location: "Barcelona",
   skill: bricklayer
 )
+
 job3.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job3.save!
 
@@ -357,6 +360,7 @@ job4 = Job.create!(
   location: "Barcelona",
   skill: painter
 )
+
 job4.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job4.save!
 
@@ -371,6 +375,7 @@ job5 = Job.create!(
   location: "Barcelona",
   skill: computer_technician
 )
+
 job5.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job5.save!
 
