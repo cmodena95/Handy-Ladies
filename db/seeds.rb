@@ -438,7 +438,7 @@ us1 = UserSkill.create!(
   )
 
 us5 = UserSkill.create!(
-  price: 5,
+  price: 15,
   user: beth,
   skill: cleaning
   )
@@ -450,23 +450,96 @@ us7 = UserSkill.create!(
 )
 
 us8 = UserSkill.create!(
-  price: 40,
+  price: 25,
   user: francis,
   skill: minor_home_repair
   )
 
 us9 = UserSkill.create!(
-  price: 50,
+  price: 35,
   user: louisa,
   skill: plumber
   )
 
 us10 = UserSkill.create!(
-  price: 5,
+  price: 30,
   user: beth,
   skill: painter
   )
 
+us14 = UserSkill.create!(
+  price: 30,
+  user: natalie,
+  skill: computer_technician
+  )
+
+us15 = UserSkill.create!(
+  price: 25,
+  user: katty,
+  skill: moving
+  )
+
+us16 = UserSkill.create!(
+  price: 40,
+  user: susan,
+  skill: painter
+  )
+
+us17 = UserSkill.create!(
+  price: 30,
+  user: olivia,
+  skill: gardening
+  )
+
+us18 = UserSkill.create!(
+  price: 20,
+  user: amelia,
+  skill: moving
+  )
+
+us19 = UserSkill.create!(
+  price: 25,
+  user: sophia,
+  skill: electrical_technician
+  )
+
+us20 = UserSkill.create!(
+  price: 40,
+  user: grace,
+  skill: carpenter
+  )
+
+us21 = UserSkill.create!(
+  price: 50,
+  user: grace,
+  skill: bricklayer
+  )
+
+us22 = UserSkill.create!(
+  price: 50,
+  user: grace,
+  skill: painter
+  )
+
+us23 = UserSkill.create!(
+  price: 45,
+  user: valentina,
+  skill: decor
+  )
+
+us24 = UserSkill.create!(
+  price: 20,
+  user: juliet,
+  skill: cleaning
+  )
+
+us25 = UserSkill.create!(
+  price: 35,
+  user: maggie,
+  skill: computer_technician
+  )
+
+us26 = UserSkill.create!(
 # us11 = UserSkill.create!(
 #   price: 30,
 #   user: norma,
