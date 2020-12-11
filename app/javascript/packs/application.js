@@ -24,6 +24,10 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import flatpickr from "flatpickr";
+import 'flatpickr/dist/flatpickr.min.css'
+
+// import { initFlatpickr } from "../plugins/flatpickr";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -31,4 +35,14 @@ import "bootstrap";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+ // initFlatpickr();
+  const flatElement = document.querySelector(".form-control.string.optional.flatpickr");
+  if (flatElement) {
+   
+    flatpickr(flatElement, {
+      altInput: true
+    });
+    console.log(flatpickr);
+  }
+
 });
