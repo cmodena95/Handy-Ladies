@@ -1,5 +1,5 @@
 <div class="card-worker mt-3">
-  <%= cl_image_tag(worker.photo.key, width: 120, height: 200, crop: :fill) %>
+  <%= cl_image_tag(worker.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face) %>
   <div class="card-worker-infos flex-box">
     <div class="card-price">
       <h3><%= worker.name %></h3>
@@ -22,3 +22,5 @@
     </div>
   </div>
 </div>
+
+
