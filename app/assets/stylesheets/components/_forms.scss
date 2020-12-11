@@ -14,12 +14,13 @@ input {
 }
 
 textarea.form-control {
-    height: 200px;
+    height: 150px;
 }
 
 .form-buttons {
     display: flex;
     align-items: center;
+    margin-bottom: 16px;
 }
 
 label{
@@ -29,3 +30,6 @@ label{
     font-family: 'Open Sans', sans-serif;
 }
 
+#new_job{
+    margin-top: 10px;
+}
