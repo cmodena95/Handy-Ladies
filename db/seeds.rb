@@ -539,7 +539,7 @@ us25 = UserSkill.create!(
   skill: computer_technician
   )
 
-us26 = UserSkill.create!(
+# us26 = UserSkill.create!(
 # us11 = UserSkill.create!(
 #   price: 30,
 #   user: norma,
