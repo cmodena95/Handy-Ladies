@@ -456,12 +456,6 @@ us5 = UserSkill.create!(
   skill: cleaning
   )
 
-us6 = UserSkill.create!(
-  price: 30,
-  user: norma,
-  skill: computer_technician
-  )
-
 us7 = UserSkill.create!(
   price: 20,
   user: louisa,

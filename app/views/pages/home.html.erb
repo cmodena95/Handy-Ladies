@@ -11,16 +11,20 @@
 
   <div class="homepage-circles-container">
     <div class="homepage-circles-strip-outer">
+      <%= link_to workers_path(query: "Electrician") do %>
+        <div class="homepage-circle-box">
+          <div class="homepage-circle">
+            Electrictian
+          </div>
+        </div>
+      <% end %>
+      <%= link_to workers_path(query: "Bricklayer") do %>
       <div class="homepage-circle-box">
         <div class="homepage-circle">
-          Electrictian
+          Bricklayer
         </div>
       </div>
-      <div class="homepage-circle-box">
-        <div class="homepage-circle">
-        Assembler
-        </div>
-      </div>
+      <% end %>
     </div>
     <div class="homepage-circles-strip-inner">
       <%= link_to workers_path(query: "Tiler") do %>
@@ -35,18 +39,22 @@
           <%= link_to "Other...", workers_path, class: "circle-links" %>
         </div>
       </div>
+      <%= link_to workers_path(query: "Carpenter") do %>
       <div class="homepage-circle-box">
         <div class="homepage-circle">
           Carpenter
         </div>
       </div>
+      <% end %>
     </div>
     <div class="homepage-circles-strip-outer">
+      <%= link_to workers_path(query: "Painter") do %>
       <div class="homepage-circle-box">
         <div class="homepage-circle">
           Painter
         </div>
       </div>
+      <% end %>
       <div class="homepage-circle-box">
         <div class="homepage-circle">
           Plumber
