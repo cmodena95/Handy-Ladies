@@ -1,0 +1,16 @@
+  <div class="container d-flex flex-column justify-content-center text-center">
+    <h1>Booking Confirmed!</h1>
+    <%= cl_image_tag(@job.handylady.photo.key, class: "avatar card-avatar-bigger") %>
+    <h1><%= @job.handylady.name %></h1>
+    <% @job.handylady.star_rating.times do %>
+      <i class="fas fa-star"></i>
+    <% end %>
+    <h3><%= @job.date %></h3>
+    <h3><%= @job.handylady.hourly_price %>€/h</h3>
+  </div>
+
+  <div>
+    <p><%= @job.description %></p>
+    <h4><%= @job.customer.address %></h4>
+    <p>{cancel booking}</p>
+  </div>
