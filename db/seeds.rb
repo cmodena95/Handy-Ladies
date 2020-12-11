@@ -126,7 +126,7 @@ address: "Barcelona, Spain",
 latitude: 41.4127396,
 longitude: 2.1761666,
 bio: "Hi, I'm Olivia, owner of a small gardening company where all the workers are women we believe in female empowerment and we work for it,
-Contact us to clear any doubt you may have about your gardering  project",
+Contact us to clear any doubt you may have about your gardening  project",
 email: "olivia@gmail.com",
 password:"123456",
 handylady: true,
@@ -455,7 +455,7 @@ us6 = UserSkill.create!(
 us7 = UserSkill.create!(
   price: 20,
   user: louisa,
-  skill: gardering
+  skill: gardening
   )
 
 us8 = UserSkill.create!(
@@ -527,7 +527,7 @@ us16 = UserSkill.create!(
 us17 = UserSkill.create!(
   price: 30,
   user: olivia,
-  skill: gardering
+  skill: gardening
   )
 
 us18 = UserSkill.create!(
