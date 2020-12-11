@@ -14,10 +14,10 @@ class JobsController < ApplicationController
     @job.handylady = @worker
     @job.customer = current_user
     @job.status = "pending"
-    if @job.save!
-      redirect_to workers_path
+    if @job.save
+      redirect_to job_path(@job)
     else
-      redirect_to worker_path(@worker)
+      render :new
     end
   end
 
