@@ -54,12 +54,17 @@
   </div>
 
 <!-- This will become an actual search bar eventually -->
+
   <div class="search-bar">
-    <p>I need something more specific...</p>
+    <%= form_tag workers_path, method: :get do %>
+      <%= select_tag :query,
+        options_from_collection_for_select(Skill.all, "id", "name"),
+        class: "form-control",
+        placeholder: "Select by skill..."
+      %>
+      <%= submit_tag "Search!", class: "btn btn-primary" %>
+    <% end %>
   </div>
 
-  <div class="available-now">
-    <h2><span style="color:#FFAAAF">Ladies</span> available now</h2>
-  </div>
 
 </div>
