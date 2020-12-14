@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   end
 
   resources :jobs, only: [:show]
+
+  resources :chatrooms, only: :show
 end
 
