@@ -28,7 +28,7 @@ import flatpickr from "flatpickr";
 import 'flatpickr/dist/flatpickr.min.css';
 import $ from 'jquery';
 global.$ = jQuery;
- //import { initFlatpickr } from "../plugins/flatpickr";
+ import { initFlatpickr } from "../plugins/flatpickr";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
