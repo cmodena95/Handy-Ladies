@@ -12,7 +12,7 @@
 </div>
 
 
-<%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
+<%= simple_form_for [ @chatroom, @message ], remote: true, authenticity_token: true do |f| %>
   <%= f.input :content, label: false, placeholder: "Message #{@chatroom.name}" %>
   <%= submit_tag "Send", class: "btn btn-primary" %>
 <% end %>

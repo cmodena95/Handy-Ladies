@@ -26,6 +26,7 @@ require("channels")
 import "bootstrap";
 import flatpickr from "flatpickr";
 import 'flatpickr/dist/flatpickr.min.css';
+import "initChatroomCable";
 
 // import { initFlatpickr } from "../plugins/flatpickr";
 
@@ -38,7 +39,7 @@ document.addEventListener('turbolinks:load', () => {
  // initFlatpickr();
   const flatElement = document.querySelector(".form-control.string.optional.flatpickr");
   if (flatElement) {
-   
+
     flatpickr(flatElement, {
       altInput: true
     });

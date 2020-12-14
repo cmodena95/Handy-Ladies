@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
         redirect_to chatroom_path(@chatroom, anchor: "message-#{@message.id}")
       else
         render "chatrooms/show"
+      end
     end
 
     private
