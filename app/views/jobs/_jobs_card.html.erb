@@ -8,19 +8,19 @@
 
     
     <% if current_user.handylady? && job.handylady == current_user %>
-      <h5 class="pending-text d-flex justify-content-end"><i class="fas fa-circle"></i> &nbsp;<%= job.status %></h5>
-      <!-- <%= link_to job_path(job), method: :delete, data: { confirm: "Are you sure?" } do %>
-          <i class="trash-icon d-flex justify-content-end fas fa-times">&nbsp;&nbsp;Reject</i>
-      <% end %> -->
-      <%= simple_form_for job do |j| %>
-        <%= j.input :status, as: :hidden, input_html: {value: "accepted"} %>
-        <%= j.submit %>
-      <% end %>
+      <h5 class="d-flex justify-content-end"><i class="fas fa-circle"></i> &nbsp;<%= job.status %></h5>
+      <div class="d-flex status">
+        <%= simple_form_for job do |j| %>
+          <%= j.input :status, as: :hidden, input_html: {value: "accepted"}%>
+          <%= j.button :submit, "accept", class: 'accept' %>
+        <% end %>
 
-      <%= simple_form_for job do |j| %>
-      <%= j.input :status, as: :hidden, input_html: {value: "rejected"} %>
-      <%= j.submit %>
-      <% end %>
+        <%= simple_form_for job do |j| %>
+        <%= j.input :status, as: :hidden, input_html: {value: "rejected"} %>
+        <%= j.button :submit, "reject", class: 'reject' %>
+        <% end %>
+      </div>
+      
   
     <% end %>
 
