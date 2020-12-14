@@ -1,0 +1,28 @@
+<div class="card-worker mt-3">
+  <%= cl_image_tag(current_user.handylady? ? job.customer.photo.key : job.handylady.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "card-avatar-bigger") %>
+  <div class="card-worker-infos flex-box">
+    <h3><%= job.customer.name %></h3>
+    <div class="card-price">
+      <h3>From <%= job.handylady.hourly_price %>€/h</h3>
+    </div>
+
+    
+    <% if current_user.handylady? && job.handylady == current_user %>
+      <h5 class="pending-text d-flex justify-content-end"><i class="fas fa-circle"></i> &nbsp;<%= job.status %></h5>
+      <!-- <%= link_to job_path(job), method: :delete, data: { confirm: "Are you sure?" } do %>
+          <i class="trash-icon d-flex justify-content-end fas fa-times">&nbsp;&nbsp;Reject</i>
+      <% end %> -->
+      <%= simple_form_for job do |j| %>
+        <%= j.input :status, as: :hidden, input_html: {value: "accepted"} %>
+        <%= j.submit %>
+      <% end %>
+
+      <%= simple_form_for job do |j| %>
+      <%= j.input :status, as: :hidden, input_html: {value: "rejected"} %>
+      <%= j.submit %>
+      <% end %>
+  
+    <% end %>
+
+  </div>
+</div>
