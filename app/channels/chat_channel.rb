@@ -4,7 +4,7 @@ class ChatChannel < ApplicationCable::Channel
     user = User.find(params[:id])
     current_user = User.find(params[:currentUserId])
 
-    chat_id = Message.chat_id(current_user, user)
+    chat_id = Message.chat_id(current_user, user) #1_18
 
     stream_from chat_id
   end

@@ -14,14 +14,14 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   </head>
 
-  <body>
+  <body data-current-user="<%= current_user&.id %>">
     <div class="home-container">
       <%= render 'shared/navbar' %>
       <%= render 'shared/flashes' %>
 
       <%= yield %>
     </div>
-    
+
     <%= render 'shared/footer' %>
 
   </body>
