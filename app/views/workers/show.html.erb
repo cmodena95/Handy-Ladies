@@ -1,11 +1,10 @@
-
-  <div class="profile-header">
-    <div class="profile-name">
-      <h1>Hi, I'm <%= @user.name %></h1>
-      <p>From <%= @user.hourly_price %>€ /h</p>
-    </div>
-    <%= cl_image_tag(@user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "card-avatar-bigger") %>
+<div class="profile-header">
+  <div class="profile-name">
+    <h1>Hi, I'm <%= @user.name %></h1>
+    <p>From <%= @user.hourly_price %>€ /h</p>
   </div>
+  <%= cl_image_tag(@user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "card-avatar-bigger") %>
+</div>
 
 
 <div class="pt-3 pb-4">
