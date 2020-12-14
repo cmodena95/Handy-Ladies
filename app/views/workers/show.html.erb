@@ -4,7 +4,7 @@
       <h1>Hi, I'm <%= @user.name %></h1>
       <p>From <%= @user.hourly_price %>€ /h</p>
     </div>
-    <%= cl_image_tag(@user.photo.key, width: 120, height: 200, crop: :fill, class: "card-avatar-bigger") %>
+    <%= cl_image_tag(@user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "card-avatar-bigger") %>
   </div>
 
 
