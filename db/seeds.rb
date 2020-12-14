@@ -310,12 +310,11 @@ job1 = Job.new(
   handylady: sophia,
   date: Date.tomorrow,
   description: "Isn`t working properly",
-  status: "pending",
+  status: "done",
   title: "need to fix some lights in my kitchen",
   location: "Barcelona",
   skill: electrical_technician
 )
-
 job1.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job1.save!
 
@@ -325,7 +324,7 @@ job2 = Job.create!(
   handylady: grace,
   date: Date.tomorrow,
   description: "Drawers are not working properly",
-  status: "pending",
+  status: "done",
   title: "Need to fix my wardrobe",
   location: "Barcelona",
   skill: carpenter
@@ -340,12 +339,11 @@ job3 = Job.create!(
   handylady: valentina,
   date: Date.tomorrow,
   description: "I want to enlarge and remodel my ktichen ",
-  status: "pending",
+  status: "done",
   title: "Need take a wall down in my kitchen",
   location: "Barcelona",
   skill: bricklayer
 )
-
 job3.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job3.save!
 
@@ -355,12 +353,11 @@ job4 = Job.create!(
   handylady: juliet,
   date: Date.tomorrow,
   description: "Currently is grey, I would like to set it pink",
-  status: "pending",
+  status: "done",
   title: "I want to change the colour of my wall room",
   location: "Barcelona",
   skill: painter
 )
-
 job4.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job4.save!
 
@@ -370,20 +367,283 @@ job5 = Job.create!(
   handylady: maggie,
   date: Date.tomorrow,
   description: "It's making a weird noise and the screen is black",
-  status: "pending",
+  status: "done",
   title: "My laptop doesn't turn on",
   location: "Barcelona",
   skill: computer_technician
 )
-
 job5.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job5.save!
+
+file = URI.open('https://lesliemaxwellkaiura.files.wordpress.com/2015/11/broken-chair-e1448055652128.jpg?w=640')
+job6 = Job.create!(
+  customer: victoria,
+  handylady: nina,
+  date: Date.tomorrow,
+  description: "I just sat on it and it smashed to pieces",
+  status: "done",
+  title: "Broken chair",
+  location: "Barcelona",
+  skill: carpenter
+)
+job6.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job6.save!
+
+file = URI.open('https://www.rentokil.com/au/blog/wp-content/uploads/2018/03/shutterstock_1062219362.jpg')
+job7 = Job.create!(
+  customer: katty,
+  handylady: melissa,
+  date: Date.tomorrow,
+  description: "Everything in my house is made of wood and has been eaten by termites, I now need everything reconstructed.",
+  status: "done",
+  title: "Everything is gone",
+  location: "Barcelona",
+  skill: carpenter
+)
+job7.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job7.save!
+
+file = URI.open('https://i.pinimg.com/originals/49/52/7f/49527fb23fa987fbce7e2d43542486e6.jpg')
+job8 = Job.create!(
+  customer: nina,
+  handylady: selena,
+  date: Date.tomorrow,
+  description: "I'd like my house to be tiled from top to bottom, including my sofa as I find I sink into it too much when I sit down.",
+  status: "done",
+  title: "Need entire house tiled",
+  location: "Barcelona",
+  skill: tiler
+)
+job8.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job8.save!
+
+file = URI.open('https://i.pinimg.com/originals/f2/0d/0b/f20d0b8f5ddb9fa9d629873a3bca8345.png')
+job9 = Job.create!(
+  customer: selena,
+  handylady: francis,
+  date: Date.tomorrow,
+  description: "All the chairlegs in my house are broken due to broken chairlegs.",
+  status: "done",
+  title: "Broken chair legs need to become whole chair legs",
+  location: "Barcelona",
+  skill: minor_home_repair
+)
+job9.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job9.save!
+
+file = URI.open('https://i.pinimg.com/originals/c4/f0/77/c4f077e14f87949677b8aa4ef978ff77.jpg')
+job10 = Job.create!(
+  customer: selena,
+  handylady: beth,
+  date: Date.tomorrow,
+  description: "My house is too green, it makes me feel like I'm laying face down in a field.",
+  status: "done",
+  title: "Need house painted",
+  location: "Barcelona",
+  skill: painter
+)
+job10.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job10.save!
+
+file = URI.open('https://www.recovery-estonia.ee/wp-content/uploads/2017/02/Rectangle-9-Copy-4.jpg')
+job11 = Job.create!(
+  customer: beth,
+  handylady: natalie,
+  date: Date.tomorrow,
+  description: "It keeps sending abusive emails to my gardener",
+  status: "done",
+  title: "Computer is behaving strangely",
+  location: "Barcelona",
+  skill: computer_technician
+)
+job11.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job11.save!
+
+file = URI.open('https://www.propertyreporter.co.uk/images/660x350/16832-shutterstock_28772569.jpg')
+job12 = Job.create!(
+  customer: natalie,
+  handylady: katty,
+  date: Date.tomorrow,
+  description: "Need help moving from my apartment into a small hole",
+  status: "done",
+  title: "Moving help please",
+  location: "Barcelona",
+  skill: moving
+)
+job12.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job12.save!
+
+file = URI.open('https://render.fineartamerica.com/images/rendered/default/canvas-print/10/6.5/mirror/break/images/artworkimages/medium/1/painted-over-windows-erik-burg-canvas-print.jpg')
+job13 = Job.create!(
+  customer: katty,
+  handylady: susan,
+  date: Date.tomorrow,
+  description: "I need all the windows painted over please",
+  status: "done",
+  title: "Painting help needed",
+  location: "Barcelona",
+  skill: painter
+)
+job13.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job13.save!
+
+file = URI.open('https://www.gannett-cdn.com/presto/2020/08/24/USAT/793bbec9-7453-4108-9e5a-7a82287e7b85-AP_White_House_Rose_Garden_Renovation.jpg?width=660&height=440&fit=crop&format=pjpg&auto=webp')
+job14 = Job.create!(
+  customer: susan,
+  handylady: olivia,
+  date: Date.tomorrow,
+  description: "Need it ripped out and replaced with nothing",
+  status: "done",
+  title: "Sick of my garden",
+  location: "Barcelona",
+  skill: gardening
+)
+job14.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job14.save!
+
+file = URI.open('https://farm3.staticflickr.com/2558/3737216640_3e1111785e_z.jpg')
+job15 = Job.create!(
+  customer: olivia,
+  handylady: amelia,
+  date: Date.tomorrow,
+  description: "I'd like all my furniture moved out for no reason please",
+  status: "done",
+  title: "Sick of my furniture",
+  location: "Barcelona",
+  skill: moving
+)
+job15.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job15.save!
+
+file = URI.open('https://photos.lensculture.com/large/49f47e7b-d938-4b96-a509-19e6621123db.jpg')
+job16 = Job.create!(
+  customer: amelia,
+  handylady: norma,
+  date: Date.tomorrow,
+  description: "It's very dark",
+  status: "done",
+  title: "Please help",
+  location: "Barcelona",
+  skill: electrical_technician
+)
+job16.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job16.save!
+
+file = URI.open('https://i2-prod.mirror.co.uk/incoming/article21609476.ece/ALTERNATES/s615b/0_Flooding-Affects-Low-Lying-Areas-Around-Yorkshire.jpg')
+job17 = Job.create!(
+  customer: amelia,
+  handylady: louisa,
+  date: Date.tomorrow,
+  description: "A flood is coming",
+  status: "done",
+  title: "Pipes have burst",
+  location: "Barcelona",
+  skill: plumber
+)
+job17.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
+job17.save!
 
 puts "completed"
 
 puts "Creating reviews..."
 
 reviews = []
+
+reviews << Review.create!(
+  title: "Did not drown",
+  description: "Fixed the broken pipe and also provided me with a snorkel and goggles so I survived the flood inside my house.",
+  star_rating: 5,
+  job: job17,
+  user: amelia
+  )
+
+reviews << Review.create!(
+  title: "Problem has been solved",
+  description: "I thought I had a problem with the electrics in my house but it turned out all the lights were just switched off.",
+  star_rating: 5,
+  job: job16,
+  user: amelia
+  )
+
+reviews << Review.create!(
+  title: "Just as I expected",
+  description: "I wanted all my furniture moved out of my apartment for no reason but she left a single fork on the floor. Job was left half done as far as I'm concerned.",
+  star_rating: 2,
+  job: job15,
+  user: susan
+  )
+
+reviews << Review.create!(
+  title: "Just as I expected",
+  description: "Helped me rip my entire garden out so and replaced with a vast amount of nothing. I now have somewhere to go and wonder where it all went wrong.",
+  star_rating: 4,
+  job: job14,
+  user: susan
+  )
+
+reviews << Review.create!(
+  title: "So happy",
+  description: "Great job. All the windows in my house have been successfully painted over.",
+  star_rating: 5,
+  job: job13,
+  user: katty
+  )
+
+reviews << Review.create!(
+  title: "Phenomenal",
+  description: "Excellent removals service. Helped me move from my apartment into a small hole seamlessly.",
+  star_rating: 5,
+  job: job12,
+  user: natalie
+  )
+
+reviews << Review.create!(
+  title: "Could be better",
+  description: "My computer no longer sends abusive emails to my gardener but it is now sending them to my dentist instead",
+  star_rating: 3,
+  job: job11,
+  user: beth
+  )
+
+reviews << Review.create!(
+  title: "Am I drowning?",
+  description: "Painted my house blue. It's too blue and now I don't know if I'm on land or under water.",
+  star_rating: 2,
+  job: job10,
+  user: selena
+  )
+
+reviews << Review.create!(
+  title: "I've literally never been this happy",
+  description: "Broken chair legs were broken due to being broken chair legs. I had to get a second opinion but I can now confirm they are once again whole chair legs.",
+  star_rating: 4,
+  job: job9,
+  user: selena
+  )
+
+reviews << Review.create!(
+  title: "There's too many tiles",
+  description: "My daughter is stuck behind the tiles please undo this",
+  star_rating: 3,
+  job: job8,
+  user: nina
+  )
+
+reviews << Review.create!(
+  title: "I've literally never been this happy",
+  description: "The termites have gone! My house stands once again!",
+  star_rating: 5,
+  job: job7,
+  user: victoria
+  )
+
+reviews << Review.create!(
+  title: "Moderately thrilled",
+  description: "I can now sit once again.",
+  star_rating: 4,
+  job: job6,
+  user: victoria
+  )
 
 reviews << Review.create!(
   title: 'Great job',
@@ -438,7 +698,7 @@ us1 = UserSkill.create!(
   )
 
 us5 = UserSkill.create!(
-  price: 5,
+  price: 15,
   user: beth,
   skill: cleaning
   )
@@ -450,23 +710,96 @@ us7 = UserSkill.create!(
 )
 
 us8 = UserSkill.create!(
-  price: 40,
+  price: 25,
   user: francis,
   skill: minor_home_repair
   )
 
 us9 = UserSkill.create!(
-  price: 50,
+  price: 35,
   user: louisa,
   skill: plumber
   )
 
 us10 = UserSkill.create!(
-  price: 5,
+  price: 30,
   user: beth,
   skill: painter
   )
 
+us14 = UserSkill.create!(
+  price: 30,
+  user: natalie,
+  skill: computer_technician
+  )
+
+us15 = UserSkill.create!(
+  price: 25,
+  user: katty,
+  skill: moving
+  )
+
+us16 = UserSkill.create!(
+  price: 40,
+  user: susan,
+  skill: painter
+  )
+
+us17 = UserSkill.create!(
+  price: 30,
+  user: olivia,
+  skill: gardening
+  )
+
+us18 = UserSkill.create!(
+  price: 20,
+  user: amelia,
+  skill: moving
+  )
+
+us19 = UserSkill.create!(
+  price: 25,
+  user: sophia,
+  skill: electrical_technician
+  )
+
+us20 = UserSkill.create!(
+  price: 40,
+  user: grace,
+  skill: carpenter
+  )
+
+us21 = UserSkill.create!(
+  price: 50,
+  user: grace,
+  skill: bricklayer
+  )
+
+us22 = UserSkill.create!(
+  price: 50,
+  user: grace,
+  skill: painter
+  )
+
+us23 = UserSkill.create!(
+  price: 45,
+  user: valentina,
+  skill: decor
+  )
+
+us24 = UserSkill.create!(
+  price: 20,
+  user: juliet,
+  skill: cleaning
+  )
+
+us25 = UserSkill.create!(
+  price: 35,
+  user: maggie,
+  skill: computer_technician
+  )
+
+# us26 = UserSkill.create!(
 # us11 = UserSkill.create!(
 #   price: 30,
 #   user: norma,
