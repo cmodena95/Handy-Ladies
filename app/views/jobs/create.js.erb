@@ -1,0 +1,16 @@
+// 1. set the session id in the div
+// 2. show modal (pop-up)
+
+(() => {
+  const dataDiv = document.getElementById('payment-data');
+  dataDiv.dataset.checkoutSessionId = "<%= @session.id %>";
+
+  // set info in modal
+  const jobTitleEl = document.getElementById('job-name')
+  jobTitleEl.innerText = "<%= @job_title %>";
+  const paymentAmountEl = document.getElementById('payment-amount')
+  paymentAmountEl.innerText = "<%= @amount / 100 %>"
+
+  // trigger modal
+    document.getElementById('pay-btn').click();
+})()

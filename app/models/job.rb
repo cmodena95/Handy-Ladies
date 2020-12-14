@@ -3,7 +3,7 @@ class Job < ApplicationRecord
   belongs_to :customer, class_name: 'User'
   belongs_to :handylady, class_name: 'User'
   has_many :reviews
-  has_many :payments
+  has_many :payments, dependent: :destroy
   has_many_attached :photos
 
   # Validations for Job

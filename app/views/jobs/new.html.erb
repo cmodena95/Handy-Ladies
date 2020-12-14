@@ -12,7 +12,7 @@
   <% end %>
   </div> 
 
-  <%= simple_form_for [@worker, @job], url: worker_jobs_path, input_html: { class: 'form-group' } do |f| %>
+  <%= simple_form_for [@worker, @job], url: worker_jobs_path, remote: true, input_html: { class: 'form-group' } do |f| %>
     <%= f.input :title %>
     <%= f.input :description, as: :text, label: 'Describe your problem' %>
     <%= f.input :photo, as: :file, label: 'Upload an image' %>
@@ -25,6 +25,57 @@
       <%= f.submit 'SEND REQUEST', class: 'button button-primary submit-btn' %>
     </div>
   <% end %>
+
+
+  <!-- modal -->
+  <div class="modal fade" id="paymodal" tabindex="-1" role="dialog" aria-labelledby="paymodalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content text-centered">
+        <div class="modal-header">
+          <h3 class="modal-title" id="paymodalLabel">Handylady payment</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body profile-header">
+          <div class="job-info">
+            <h3>Job: <span id="job-name"></span></h3>
+            <p>Booking fee: <span id="payment-amount"></span> €</p>
+            <h6 class="fee-policy">(*) The booking fee covers the reservation of the handylady and one hour of work</h6>
+          </div>
+          <div class="image-handylady">
+            <%= cl_image_tag(@worker.photo.key, width: 40, height: 40, crop: :fill, class: "card-avatar") %>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" id="pay-now">Pay now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="pay-btn" type="button" class="btn btn-primary d-none" data-toggle="modal" data-target="#paymodal">
+  Launch demo modal
+  </button>
+
+  <div id="payment-data" data-stripe-publishable-key="<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>"
+       data-checkout-session-id=""></div>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    const paymentButton = document.getElementById('pay-now');
+    paymentButton.addEventListener('click', () => {
+      const dataDiv = document.getElementById('payment-data')
+      const stripePublishableKey = dataDiv.dataset.stripePublishableKey;
+      const checkoutSessionId = dataDiv.dataset.checkoutSessionId;
+
+      const stripe = Stripe(stripePublishableKey);
+      stripe.redirectToCheckout({
+        sessionId: checkoutSessionId
+      });
+    });
+  </script>
 </div>
 
 
