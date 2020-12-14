@@ -5,6 +5,12 @@
   const dataDiv = document.getElementById('payment-data');
   dataDiv.dataset.checkoutSessionId = "<%= @session.id %>";
 
+  // set info in modal
+  const jobTitleEl = document.getElementById('job-name')
+  jobTitleEl.innerText = "<%= @job_title %>";
+  const paymentAmountEl = document.getElementById('payment-amount')
+  paymentAmountEl.innerText = "<%= @amount / 100 %>"
+
   // trigger modal
-    document.getElementById('#pay').modal('show')
+    document.getElementById('pay-btn').click();
 })()

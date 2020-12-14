@@ -25,11 +25,14 @@ class JobsController < ApplicationController
 
   def create_payment
     @amount = 6000
+    @job_title =  "#{@job.title} by #{@job.handylady.name}"
+    image_options = { width: 150, height: 150, crop: :fill }
+    @image_path = Cloudinary::Utils.cloudinary_url(@job.handylady.photo.key, image_options)
     @session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
       line_items: [{
-        name: "#{@job.title} by #{@job.handylady.name}",
-        images:[],# [ coudinary image tag with @job.handylady.photo.key ],
+        name: @job_title,
+        images:[ @image_path ],
         amount: @amount,
         currency: 'eur',
         quantity: 1
