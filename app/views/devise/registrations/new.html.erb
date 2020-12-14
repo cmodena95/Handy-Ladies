@@ -26,15 +26,7 @@
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
 
-    <%= f.input :bio,
-                 autofocus: true,
-                 input_html: { autocomplete: "Bio" }%>
-
     <%= f.input :photo, as: :file %>
-      <p><strong>If you are a looking for a job, choose your your Handy Lady skills below:</strong></p>
-    <%= f.association :skills, as: :check_boxes,
-                      input_html: { class: "tag-selector" },
-                      item_wrapper_class: 'tag-item'%>
 
     <%= f.button :submit, "Sign up" %>
     <%= render "devise/shared/links" %>
