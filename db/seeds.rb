@@ -13,7 +13,7 @@ puts "completed"
 
 puts "Creating users..."
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686089/Ladies/Norma_mckhco.jpg')
+file = URI.open('https://avatars0.githubusercontent.com/u/63473623?v=4')
 norma = User.new(
   name: "Norma",
   address: "Barcelona, Spain",
@@ -29,7 +29,7 @@ norma = User.new(
 norma.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 norma.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686097/Ladies/Louisa_br5xtn.jpg')
+file = URI.open('https://avatars3.githubusercontent.com/u/68252652?v=4  ')
 louisa = User.new(
   name: "Louisa",
   address: "Madrid, Spain",
@@ -286,15 +286,15 @@ victoria.save!
 puts "completed"
 
 puts "creating new skills"
-appliance_repair = Skill.create!(name: 'Appliance repair')
+appliance = Skill.create!(name: 'Appliance')
 bricklayer = Skill.create!(name: 'Bricklayer')
 carpenter = Skill.create!(name: 'Carpenter')
-computer_technician = Skill.create!(name: 'Computer technician')
+it_technician = Skill.create!(name: 'IT technician')
 cleaning = Skill.create!(name: 'Cleaning')
 decor = Skill.create!(name: 'Decor')
-electrical_technician = Skill.create!(name: 'Electrical technician')
+electrical = Skill.create!(name: 'Electrical')
 gardening = Skill.create!(name: 'Gardening')
-minor_home_repair= Skill.create!(name: 'Minor Home repair')
+home_repair = Skill.create!(name: 'Home repair')
 moving = Skill.create!(name: 'Moving')
 painter = Skill.create!(name: 'Painter')
 plumber = Skill.create!(name: 'Plumber')
@@ -309,11 +309,11 @@ job1 = Job.new(
   customer: norma,
   handylady: sophia,
   date: Date.tomorrow,
-  description: "Isn`t working properly",
+  description: "Isn't working properly",
   status: "done",
   title: "need to fix some lights in my kitchen",
   location: "Barcelona",
-  skill: electrical_technician
+  skill: electrical
 )
 job1.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job1.save!
@@ -370,7 +370,7 @@ job5 = Job.create!(
   status: "done",
   title: "My laptop doesn't turn on",
   location: "Barcelona",
-  skill: computer_technician
+  skill: it_technician
 )
 job5.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job5.save!
@@ -426,7 +426,7 @@ job9 = Job.create!(
   status: "done",
   title: "Broken chair legs need to become whole chair legs",
   location: "Barcelona",
-  skill: minor_home_repair
+  skill: home_repair
 )
 job9.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job9.save!
@@ -454,7 +454,7 @@ job11 = Job.create!(
   status: "done",
   title: "Computer is behaving strangely",
   location: "Barcelona",
-  skill: computer_technician
+  skill: it_technician
 )
 job11.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job11.save!
@@ -524,7 +524,7 @@ job16 = Job.create!(
   status: "done",
   title: "Please help",
   location: "Barcelona",
-  skill: electrical_technician
+  skill: electrical
 )
 job16.photos.attach(io: file, filename: 'job.png', content_type: 'image/png')
 job16.save!
@@ -712,7 +712,7 @@ us7 = UserSkill.create!(
 us8 = UserSkill.create!(
   price: 25,
   user: francis,
-  skill: minor_home_repair
+  skill: home_repair
   )
 
 us9 = UserSkill.create!(
@@ -730,7 +730,7 @@ us10 = UserSkill.create!(
 us14 = UserSkill.create!(
   price: 30,
   user: natalie,
-  skill: computer_technician
+  skill: it_technician
   )
 
 us15 = UserSkill.create!(
@@ -760,7 +760,7 @@ us18 = UserSkill.create!(
 us19 = UserSkill.create!(
   price: 25,
   user: sophia,
-  skill: electrical_technician
+  skill: electrical
   )
 
 us20 = UserSkill.create!(
@@ -796,7 +796,7 @@ us24 = UserSkill.create!(
 us25 = UserSkill.create!(
   price: 35,
   user: maggie,
-  skill: computer_technician
+  skill: it_technician
   )
 
 # us26 = UserSkill.create!(
@@ -809,7 +809,7 @@ us25 = UserSkill.create!(
 # us12 = UserSkill.create!(
 #   price: 20,
 #   user: louisa,
-#   skill: appliance_repair
+#   skill: appliance
 #   )
 
 us13 = UserSkill.create!(
@@ -821,7 +821,7 @@ us13 = UserSkill.create!(
 # us14 = UserSkill.create!(
 #   price: 50,
 #   user: francis,
-#   skill: appliance_repair
+#   skill: appliance
 #   )
 
 # us15 = UserSkill.create!(
@@ -863,7 +863,7 @@ us13 = UserSkill.create!(
 # us19 = UserSkill.create!(
 #   price: 5,
 #   user: sophia,
-#   skill: electrical_technician
+#   skill: electrical
 #   )
 
 # us20 = UserSkill.create!(
@@ -899,7 +899,7 @@ us13 = UserSkill.create!(
 # us25 = UserSkill.create!(
 #   price: 50,
 #   user: maggie,
-#   skill: computer_technician
+#   skill: it_technician
 #   )
 
 # us26 = UserSkill.create!(
