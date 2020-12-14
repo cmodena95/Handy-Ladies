@@ -1,16 +1,20 @@
 import consumer from "./consumer";
 
-const initChatroomCable = () => {
+const initChatCable = () => {
   const messagesContainer = document.getElementById('messages');
-  if (messagesContainer) {
-    const id = messagesContainer.dataset.chatroomId;
+  const newMessage = document.getElementById('message_content');
 
-    consumer.subscriptions.create({ channel: "ChatroomChannel", id: id }, {
+  if (messagesContainer) {
+    const id = messagesContainer.dataset.userId;
+    const currentUserId = messagesContainer.dataset.currentUserId
+
+    consumer.subscriptions.create({ channel: "ChatChannel", id, currentUserId }, {
       received(data) {
-        console.log(data); // called when data is broadcast in the cable
+        newMessage.value = ''
+        messagesContainer.insertAdjacentHTML('beforeend', data);
       },
     });
   }
 }
 
-export { initChatroomCable };
+export { initChatCable };

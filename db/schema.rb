@@ -62,12 +62,12 @@ ActiveRecord::Schema.define(version: 2020_12_14_095746) do
 
   create_table "messages", force: :cascade do |t|
     t.string "content"
-    t.bigint "chatroom_id", null: false
-    t.bigint "user_id", null: false
+    t.bigint "sender_id", null: false
+    t.bigint "receiver_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
-    t.index ["user_id"], name: "index_messages_on_user_id"
+    t.index ["receiver_id"], name: "index_messages_on_receiver_id"
+    t.index ["sender_id"], name: "index_messages_on_sender_id"
   end
 
   create_table "payments", force: :cascade do |t|
@@ -133,8 +133,8 @@ ActiveRecord::Schema.define(version: 2020_12_14_095746) do
   add_foreign_key "jobs", "skills"
   add_foreign_key "jobs", "users", column: "customer_id"
   add_foreign_key "jobs", "users", column: "handylady_id"
-  add_foreign_key "messages", "chatrooms"
-  add_foreign_key "messages", "users"
+  add_foreign_key "messages", "users", column: "receiver_id"
+  add_foreign_key "messages", "users", column: "sender_id"
   add_foreign_key "payments", "jobs"
   add_foreign_key "payments", "users"
   add_foreign_key "reviews", "jobs"
