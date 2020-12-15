@@ -24,6 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import "cocoon-js";
 import { initFlatpickr } from "../plugins/flatpickr";
 
 // Internal imports, e.g:

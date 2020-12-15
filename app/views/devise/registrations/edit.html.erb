@@ -5,15 +5,24 @@
 
   <div class="form-inputs">
   <p><strong>If you are a looking for a job, choose your your Handy Lady skills below:</strong></p>
-    <%= f.association :skills, as: :check_boxes,
-                      input_html: { class: "tag-selector" },
-                      item_wrapper_class: 'tag-item'%>
+    <div id='tasks'>
+        <%= f.simple_fields_for :user_skills do |user_skill| %>
+          <%= render 'user_skill_fields', :f => user_skill %>
+        <% end %>
+        <div class='links'>
+          <%= link_to_add_association 'add skill', f, :user_skills %>
+        </div>
+    </div>
+
     <%= f.input :email, required: true, autofocus: true %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
-    <%= f.input :photo, as: :file %>
+    <%= f.label :"Profile Photo" %>
+    <%= f.input :photo, as: :file,
+                label: false %>
+    <%= f.input :portfolio_photos, as: :file, input_html: { multiple: true } %>
     <%= f.input :bio,
                  autofocus: true,
                  input_html: { autocomplete: "Bio" }%>
