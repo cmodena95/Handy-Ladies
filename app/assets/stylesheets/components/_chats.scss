@@ -58,7 +58,10 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  margin-top: 20px;
+  margin-top: 30px;
+  .form-control {
+    border-radius: 50px;
+  }
 }
 
 .text-input {
@@ -71,6 +74,7 @@
   position: absolute;
   align-self: flex-end;
   bottom: -45px;
-  left: 270px;
+  left: 290px;
+  border-radius: 50%;
 }
 
