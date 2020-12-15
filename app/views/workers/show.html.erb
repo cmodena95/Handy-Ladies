@@ -1,7 +1,11 @@
 <div class="profile-header">
   <div class="profile-name">
     <h1>Hi, I'm <%= @user.name %></h1>
+
+    <p>Joined in <%= @user.created_at.strftime("%b %d, %Y") %></p>
+
     <p>From <%= @user.hourly_price %>€ /h</p>
+
   </div>
   <%= cl_image_tag(@user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "card-avatar-bigger") %>
 </div>
@@ -9,21 +13,30 @@
 
 <div class="pt-3 pb-4">
   <h4>Identity verified</h4>
+
+  <% if current_user.handylady? %>
+    <h4><%= @user.hourly_price %> €/h</h4>
+  <% end %>
+
+
   <h4><%= @user.handylady_reviews.length %> reviews</h4>
-  <h4><%= @user.hourly_price %></h4>
 </div>
 
 <div class="pb-3 mr-3 mt-2">
   <h2>About</h2>
   <p><%= @user.bio %></p>
-  <h4>Lives in <%= @user.address %></h4>
+  <h4> <i class="fas fa-map-marker-alt"></i> Lives in <%= @user.address %></h4>
 </div>
 
-<div class="skills-container">
-  <% @user.skills.each do |skill| %>
+<% if current_user.handylady? %>
+  <h2>Skills:</h2>
+  <div class="skills-container">
+    <% @user.skills.each do |skill| %>
     <span class="pill"><%= skill.name %></span>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+<% end %>
+
 
 
 <div class="rev mt-3">
@@ -32,43 +45,48 @@
 
 
 <% @user.handylady_reviews.each do |review| %>
-  <div class="reviews d-flex">
-    <div class="avatar mr-4">
-      <%# <img class="card-avatar" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" alt="Blond woman"> %>
+<div class="reviews d-flex">
+  <div class="avatar mr-5">
+    <!-- not sure how to get photos of the user who left the review -->
+    <%= cl_image_tag(@user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "card-avatar-bigger") %>
+  </div>
+
+  <div class="review-information">
+    <div>
+      <h3><%= review.description %></h3>
+      <div class="stars d-flex">
+        <% review.star_rating.times do %>
+        <i class="fas fa-star"></i>
+        <% end %>
+
+        <% (5 - review.star_rating).times do %>
+        <i class="far fa-star"></i>
+        <% end %>
+      </div>
+      <p><%= review.user.name %> on 23th Feb 2019</p>
     </div>
+  </div>
+</div>
+<% end %>
 
-    <div class="review-information">
-      <div>
-        <h3><%= review.description %></h3>
-        <div class="stars d-flex">
-          <% review.star_rating.times do %>
-            <i class="fas fa-star"></i>
-          <% end %>
-
-          <% (5 - review.star_rating).times do %>
-            <i class="far fa-star"></i>
-          <% end %>
-        </div>
-        <p><%= review.user.name %> on 23th Feb 2019</p>
+<% if current_user.handylady? %>
+  <div class="works mt-5">
+    <h2><%= @user.name %>'s jobs</h2>
+    <div class="portfolio d-flex">
+      <div class="picture mb-3">
+        <% current_user.portfolio_photos.each do |photo| %>
+          <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+        <% end %>
       </div>
     </div>
   </div>
 <% end %>
 
 
-<div class="works mt-5">
-  <h2><%= @user.name %>'s jobs</h2>
-  <div class="portfolio d-flex">
-    <% @user.handylady_jobs.each do |job| %>
-      <div class="picture">
-        <%# image_tag %>
-      </div>
-    <% end %>
-  </div>
-</div>
-
 <div class="form-buttons">
   <%# , worker_path(params[:worker_id]), %>
   <%= link_to "CONTACT", chat_path(@user), class: "button" %>
-  <%= link_to "BOOK NOW >", new_worker_job_path(@user), class: 'button button-primary submit-btn' %>
+  <% if current_user.handylady? %>
+    <%= link_to "BOOK NOW >", new_worker_job_path(@user), class: 'button button-primary submit-btn' %>
+  <% end %>
 </div>

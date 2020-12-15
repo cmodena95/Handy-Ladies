@@ -11,7 +11,9 @@ class User < ApplicationRecord
 
   has_many :handylady_reviews, class_name: 'Review', through: :handylady_jobs, source: :reviews
   has_one_attached :photo
+  has_many_attached :portfolio_photos
 
+  accepts_nested_attributes_for :user_skills, reject_if: :all_blank, allow_destroy: true
   # Validations for User
   # validates :name, :address, :bio, presence: true
   # validates :bio, length: { minimum: 10 }
@@ -33,4 +35,5 @@ class User < ApplicationRecord
     rating = handylady_reviews.average(:star_rating) || 0
     rating.to_i
   end
+
 end

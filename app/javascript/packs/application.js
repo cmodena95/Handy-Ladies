@@ -24,6 +24,10 @@ require("channels")
 
 // External imports
 import "bootstrap";
+
+import "cocoon-js";
+import { initFlatpickr } from "../plugins/flatpickr";
+
 import 'flatpickr/dist/flatpickr.min.css';
 import { initChatCable } from '../channels/chatroom_channel'
 
@@ -31,6 +35,7 @@ import { initChatCable } from '../channels/chatroom_channel'
 import $ from 'jquery';
 global.$ = jQuery;
  import { initFlatpickr } from "../plugins/flatpickr";
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
