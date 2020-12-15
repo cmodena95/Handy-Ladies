@@ -40,9 +40,9 @@
         </div>
         <div class="modal-body profile-header">
           <div class="job-info">
-            <h3>Job: <span id="job-name"></span></h3>
+            <h3><span id="job-name"></span> <span id="job-worker"><%= @worker.name %></span></h3>
             <p>Booking fee: <span id="payment-amount"></span> €</p>
-            <h6 class="fee-policy">(*) The booking fee covers the reservation of the handylady and one hour of work</h6>
+            <h6 class="fee-policy"><i class="fas fa-exclamation-circle"></i> The booking fee covers the reservation of the handylady and one hour of work, if a request is rejected the booking fee is refunded</h6>
           </div>
           <div class="image-handylady">
             <%= cl_image_tag(@worker.photo.key, width: 40, height: 40, crop: :fill, class: "card-avatar") %>
@@ -62,20 +62,7 @@
 
   <div id="payment-data" data-stripe-publishable-key="<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>"
        data-checkout-session-id=""></div>
-  <script src="https://js.stripe.com/v3/"></script>
-  <script>
-    const paymentButton = document.getElementById('pay-now');
-    paymentButton.addEventListener('click', () => {
-      const dataDiv = document.getElementById('payment-data')
-      const stripePublishableKey = dataDiv.dataset.stripePublishableKey;
-      const checkoutSessionId = dataDiv.dataset.checkoutSessionId;
 
-      const stripe = Stripe(stripePublishableKey);
-      stripe.redirectToCheckout({
-        sessionId: checkoutSessionId
-      });
-    });
-  </script>
 </div>
 
 
