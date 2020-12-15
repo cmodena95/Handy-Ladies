@@ -55,6 +55,13 @@
 
 #job-name {
   font-weight: normal;
+  font-size: larger;
+}
+
+#job-worker{
+  color: $primary;
+  font-size: larger;
+  font-weight: 600;
 }
 
 .job-info > p{
