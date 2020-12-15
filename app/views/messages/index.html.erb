@@ -1,0 +1,14 @@
+<!-- Message.where(sender: current_user, receiver: ?).or(Message.where(......)).order(:create_at).first
+ -->
+
+
+
+<% messages = [] %>
+
+<% @messages.each do |m| %>
+<% if m.sender_id == current_user.id || m.receiver_id == current_user.id %>
+<% messages << m %>
+<% end %>
+<% end %>
+
+<% p messages %>

@@ -1,0 +1,16 @@
+.search-bar {
+  display: flex;
+  position: relative;
+}
+
+.search-form {
+  position: absolute;
+  width: 100%;
+  .form-control {
+    border-radius: 50px;
+  }
+}
+
+  .search-button {
+  position: absolute;
+}

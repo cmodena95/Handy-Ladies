@@ -67,13 +67,19 @@
 <!-- This will become an actual search bar eventually -->
 
   <div class="search-bar">
+    <div class="search-form">
     <%= form_tag workers_path, method: :get do %>
       <%= select_tag :query,
         options_from_collection_for_select(Skill.all, "name", "name"),
         class: "form-control",
         placeholder: "Select by skill..."
       %>
-      <%= submit_tag "Search!", class: "btn btn-primary" %>
+    </div>
+    <div class="search-button">
+    <%= button_tag type: 'submit', class: "btn btn-primary" do %>
+      <i class="fas fa-search" aria-hidden="true"></i>
+    <% end %>
+    </div>
     <% end %>
   </div>
 
