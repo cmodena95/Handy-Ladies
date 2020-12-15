@@ -4,16 +4,13 @@
 
     <p>Joined in <%= @user.created_at.strftime("%b %d, %Y") %></p>
 
-    <p>From <%= @user.hourly_price %>€ /h</p>
-
   </div>
   <%= cl_image_tag(@user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "card-avatar-bigger") %>
 </div>
 
 
 <div class="pt-3 pb-4">
-  <h4>Identity verified</h4>
-
+    <h4>Identity verified <i class="far fa-check-circle"></i></h4>
   <% if current_user.handylady? %>
     <h4><%= @user.hourly_price %> €/h</h4>
   <% end %>
@@ -42,7 +39,6 @@
 <div class="rev mt-3">
   <h2><%= @user.name %>'s reviews <%= @user.star_rating %>/5</h2>
 </div>
-
 
 <% @user.handylady_reviews.each do |review| %>
 <div class="reviews d-flex">
@@ -86,7 +82,7 @@
 <div class="form-buttons">
   <%# , worker_path(params[:worker_id]), %>
   <%= link_to "CONTACT", chat_path(@user), class: "button" %>
-  <% if current_user.handylady? %>
+  <% if @user.handylady? %>
     <%= link_to "BOOK NOW >", new_worker_job_path(@user), class: 'button button-primary submit-btn' %>
   <% end %>
 </div>

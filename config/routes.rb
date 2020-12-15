@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get 'chats/:user_id', to: 'chats#show', as: 'chat'
 
-  resources :users, only: :show do
+  resources :users, only: [:index, :show] do
     resources :messages, only: :create
   end
 
