@@ -54,3 +54,23 @@
   }
 }
 
+.message-input {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 20px;
+}
+
+.text-input {
+  width: 100%;
+  margin-bottom: 0px;
+  position: absolute;
+}
+
+.send {
+  position: absolute;
+  align-self: flex-end;
+  bottom: -45px;
+  left: 270px;
+}
+

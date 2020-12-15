@@ -7,6 +7,15 @@
 
 
 <%= simple_form_for [ @user, @message ], remote: true, authenticity_token: true do |f| %>
-  <%= f.input :content, label: false, placeholder: "Message #{@user.name}" %>
-  <%= submit_tag "Send", class: "btn btn-primary" %>
+  <div class="message-input">
+    <div class="text-input">
+      <%= f.input :content, label: false, placeholder: "Message #{@user.name}" %>
+    </div>
+    <div class="send-button">
+      <%= submit_tag 'send', class: "btn btn-primary send" %>
+    </div>
+  </div>
 <% end %>
+
+<br>
+<br>
