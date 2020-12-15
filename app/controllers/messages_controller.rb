@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
     if @message.save
       ActionCable.server.broadcast(
         Message.chat_id(@user, current_user),
-        render_to_string(partial: "message", locals: { message: @message })
+        render_to_string(partial: "message", locals: { message: @message, current_user_id: @user.id })
       )
     else
       render "chats/show"

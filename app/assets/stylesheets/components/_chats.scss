@@ -1,3 +1,33 @@
-.sender {
-  text-align: left;
+.message-container {
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+  }
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+}
+
+.message-content {
+  background-color: #F7F7F7;
+  padding: 10px;
+  border-radius: 6px;
+  width: 80%;
+}
+
+.message-container.receiver img {
+  left: 0;
+  top: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.message-container.sender img {
+  right: 0;
+  top: 30px;
+  height: 30px;
+  width: 30px;
 }
