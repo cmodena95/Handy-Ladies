@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_10_105316) do
+ActiveRecord::Schema.define(version: 2020_12_15_121918) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,9 +36,15 @@ ActiveRecord::Schema.define(version: 2020_12_10_105316) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "chatrooms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "jobs", force: :cascade do |t|
     t.string "location"
-    t.date "date"
+    t.datetime "date"
     t.text "description"
     t.string "status"
     t.date "started_at"
@@ -55,7 +61,7 @@ ActiveRecord::Schema.define(version: 2020_12_10_105316) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.text "content"
+    t.string "content"
     t.bigint "sender_id", null: false
     t.bigint "receiver_id", null: false
     t.datetime "created_at", precision: 6, null: false

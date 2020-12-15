@@ -1,0 +1,36 @@
+// 1. set the session id in the div
+// 2. show modal (pop-up)
+
+(() => {
+  const setupPaymentButtonEvent = () => {
+    const paymentButton = document.getElementById('pay-now');
+    paymentButton.addEventListener('click', () => {
+      const dataDiv = document.getElementById('payment-data')
+      const stripePublishableKey = dataDiv.dataset.stripePublishableKey;
+      const checkoutSessionId = dataDiv.dataset.checkoutSessionId;
+
+      const stripe = Stripe(stripePublishableKey);
+      stripe.redirectToCheckout({
+        sessionId: checkoutSessionId
+      });
+    });
+  }
+  setupPaymentButtonEvent();
+
+  // add stripe js
+  const stripeEl = document.createElement('script')
+  stripeEl.src = "https://js.stripe.com/v3/";
+  document.head.appendChild(stripeEl);
+  
+  const dataDiv = document.getElementById('payment-data');
+  dataDiv.dataset.checkoutSessionId = "<%= @session.id %>";
+
+  // set info in modal
+  const jobTitleEl = document.getElementById('job-name')
+  jobTitleEl.innerText = "<%= @job_title %>";
+  const paymentAmountEl = document.getElementById('payment-amount')
+  paymentAmountEl.innerText = "<%= @amount / 100 %>"
+
+  // trigger modal
+    document.getElementById('pay-btn').click();
+})()

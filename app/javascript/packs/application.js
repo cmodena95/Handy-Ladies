@@ -24,8 +24,18 @@ require("channels")
 
 // External imports
 import "bootstrap";
+
 import "cocoon-js";
 import { initFlatpickr } from "../plugins/flatpickr";
+
+import 'flatpickr/dist/flatpickr.min.css';
+import { initChatCable } from '../channels/chatroom_channel'
+
+// import { initFlatpickr } from "../plugins/flatpickr";
+import $ from 'jquery';
+global.$ = jQuery;
+ import { initFlatpickr } from "../plugins/flatpickr";
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -33,6 +43,18 @@ import { initFlatpickr } from "../plugins/flatpickr";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+ // initFlatpickr();
+  initChatCable();
+
+  const flatElement = document.querySelector(".form-control.string.optional.flatpickr");
+  if (flatElement) {
+
+    flatpickr(flatElement, {
+      altInput: true
+    });
+    console.log(flatpickr);
+  }
+
   initFlatpickr();
 
 });
