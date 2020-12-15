@@ -8,12 +8,20 @@
   padding-top: 50px;
 }
 
-.homepage-circles-strip-inner {
+.homepage-circles-strip-outer a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.homepage-circles-strip-inner a {
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 .homepage-circle-box {
   text-align: center;
   justify-content: space-around;
+
 }
 
 .homepage-circle {
@@ -29,5 +37,20 @@
   font-family: Open sans;
   font-weight: bold;
   font-size: 13px;
+
+
+}
+
+.homepage-circle a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.homepage-circle:hover {
+
+  box-shadow: 0 0 5px 3px #c2c1be;
+  transition: box-shadow 1,5s ease-in-out;
+
+
 }
 
