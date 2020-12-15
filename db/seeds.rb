@@ -13,7 +13,7 @@ puts "completed"
 
 puts "Creating users..."
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686089/Ladies/Norma_mckhco.jpg')
+file = URI.open('https://avatars0.githubusercontent.com/u/63473623?v=4')
 norma = User.new(
   name: "Norma",
   address: "Barcelona, Spain",
@@ -29,7 +29,7 @@ norma = User.new(
 norma.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 norma.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686097/Ladies/Louisa_br5xtn.jpg')
+file = URI.open('https://avatars3.githubusercontent.com/u/68252652?v=4  ')
 louisa = User.new(
   name: "Louisa",
   address: "Madrid, Spain",
@@ -44,7 +44,7 @@ louisa = User.new(
 louisa.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 louisa.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686092/Ladies/Francis_zh3z5j.jpg')
+file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023860/ladies%202/A51FF5E4-EFE3-4CAF-84E5-147FAE2766A3_csb2gq.jpg')
 francis = User.new(
   name: "Francis",
   address: "Madrid, Spain",
@@ -59,7 +59,7 @@ francis = User.new(
 francis.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 francis.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686089/Ladies/Beth_xdlj9d.jpg')
+file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023860/ladies%202/F29DF9E8-AF61-4114-B76D-35C3A05BC55B_kjmlp8.jpg')
 beth = User.new(
   name: "Beth",
   address: "Sitges, Spain",
@@ -74,7 +74,7 @@ beth = User.new(
 beth.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 beth.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686093/Ladies/Natalie_fcabrk.jpg')
+file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023860/ladies%202/0E1F2DE2-63D8-456C-A675-8E57C815FC89_kxk803.jpg')
 natalie = User.new(
 name: "Natalie",
 address: "Barcelona, Spain",
@@ -89,7 +89,7 @@ available_until: Time.now.advance(hour: 3)
 natalie.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 natalie.save!
 
-file = URI.open('https://broadly-images.vice.com/images/articles/meta/2015/11/03/hauling-ass-with-an-all-female-moving-company-1446559688.jpg?crop=1xw:0.75xh;center,center')
+file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023860/ladies%202/3F67FB0C-3328-4531-B1F5-8BC3D3FF2FC5_sqsjni.jpg')
 katty = User.new(
 name: "Katty",
 address: "Barcelona, Spain",
@@ -104,7 +104,7 @@ available_until: Time.now.advance(hour: 3)
 katty.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 katty.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686091/Ladies/Susan_pnew6r.jpg')
+file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023859/ladies%202/E0EB88C0-2E75-465F-8FAC-F047C1A9D19E_lh9niy.jpg')
 susan = User.new(
 name: "Susan",
 address: "Barcelona, Spain",
@@ -119,7 +119,7 @@ available_until: Time.now.advance(hour: 3)
 susan.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 susan.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686090/Ladies/Olivia_z6yiks.jpg')
+file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023859/ladies%202/6CCC6C59-AA5A-4FE9-8E98-806F25DDDA12_rxqjyp.jpg')
 olivia = User.new(
 name: "Olivia",
 address: "Barcelona, Spain",
@@ -135,7 +135,7 @@ available_until: Time.now.advance(hour: 3)
 olivia.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 olivia.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686090/Ladies/Amelia_mwu73c.jpg')
+file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023859/ladies%202/9948FAFE-0E77-4725-8FDD-AFDCA44CF901_hydtxh.jpg')
 amelia = User.new(
 name: "Amelia",
 address: "Barcelona, Spain",
@@ -150,7 +150,7 @@ available_until: Time.now.advance(hour: 3)
 amelia.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 amelia.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686092/Ladies/Sophia_g7uumj.jpg')
+file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023859/ladies%202/D8B0DF08-2A9A-47F5-8CB2-AAB00C768AC3_ckfcxy.jpg')
 sophia = User.new(
 name: "Sophia",
 address: "Barcelona, Spain",
@@ -165,7 +165,7 @@ available_until: Time.now.advance(hour: 3)
 sophia.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 sophia.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686091/Ladies/Grace_ovk0kh.jpg')
+file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023859/ladies%202/8EA824A7-B16F-45E1-A887-0E3ACBA30C57_w8bcb1.jpg')
 grace = User.new(
 name: "Grace",
 address: "Barcelona, Spain",
@@ -180,7 +180,7 @@ available_until: Time.now.advance(hour: 3)
 grace.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 grace.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686091/Ladies/Valentina_xrw0ip.jpg')
+file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023859/ladies%202/A30A6702-93D2-4CC2-9BC4-C77EF843F0D9_mv2xeu.jpg')
 valentina = User.new(
 name: "Valentina",
 address: "Barcelona, Spain",
@@ -195,7 +195,7 @@ available_until: Time.now.advance(hour: 3)
 valentina.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 valentina.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686088/Ladies/Juliet_a88gyq.jpg')
+file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023858/ladies%202/584C8ADD-C4F2-4D18-89BC-07FACADD866E_wiqgjv.jpg')
 juliet = User.new(
 name: "Juliet",
 address: "Barcelona, Spain",
@@ -210,7 +210,7 @@ available_until: Time.now.advance(hour: 3)
 juliet.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 juliet.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686092/Ladies/Maggie_r4pekt.jpg')
+file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023858/ladies%202/72971199-C10B-43D6-A282-E836A5BBCDAA_fc6hpv.jpg')
 maggie = User.new(
 name: "Maggie",
 address: "Barcelona, Spain",
@@ -226,7 +226,7 @@ available_until: Time.now.advance(hour: 3)
 maggie.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 maggie.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686094/Ladies/Nina_swr839.jpg')
+file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023858/ladies%202/5B07071F-D920-4C64-851A-84DA431DEA38_fizfbq.jpg')
 nina = User.new(
 name: "Nina",
 address: "Barcelona, Spain",
@@ -241,7 +241,7 @@ available_until: Time.now.advance(hour: 3)
 nina.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 nina.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686089/Ladies/Melissa_fkbuyt.jpg')
+file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023858/ladies%202/BEC8FFFA-96D3-4315-8857-839951B524BA_dj6iux.jpg')
 melissa = User.new(
 name: "Melissa",
 address: "Barcelona, Spain",
@@ -256,7 +256,7 @@ available_until: Time.now.advance(hour: 3)
 melissa.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 melissa.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1607686089/Ladies/Selena_evgmtf.jpg')
+file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023859/ladies%202/D1BA3256-A008-4C8F-836B-AF9D54352F2E_mbmfi0.jpg')
 selena = User.new(
 name: "Selena",
 address: "Barcelona, Spain",
