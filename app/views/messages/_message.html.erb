@@ -1,9 +1,11 @@
 <div class="message-container <%= message.sender == current_user ? 'sender' : 'receiver' %>" data-sender="<%= message.sender.id %>" data-receiver="<%= message.receiver.id %>" id="message-<%= message.id %>">
   <i class="author">
-    <div class="message-time"><%= message.created_at.strftime("%b %e, %l:%M%p") %></div>
+    <div class="message-time"><%= message.created_at.strftime("%b %e, %k:%M") %></div>
   </i>
   <div class="message">
-    <div class="message-content"><%= message.content %></div>
+    <div class="message-content">
+        <%= message.content %>
+      </div>
     <%= cl_image_tag(message.sender.photo.key, width: 120, height: 200, crop: :fill, class: "card-avatar-bigger") %>
   </div>
 </div>

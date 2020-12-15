@@ -15,7 +15,7 @@
 
 .message-content {
   background-color: #F7F7F7;
-  padding: 10px;
+  padding: 10px 15px 10px 15px;
   border-radius: 6px;
   width: 80%;
 }
@@ -24,11 +24,12 @@
   .message-time {
     text-align: left;
     margin-left: 20px;
+    font-size: 15px;
   }
   .message-content {
     margin-right: 30px;
   }
-  img {
+    img {
     left: -20px;
     top: 30px;
     height: 30px;
@@ -37,6 +38,7 @@
 }
 
 .message-container.sender {
+    text-align: right;
   .message-time {
     text-align: right;
     margin-right: 20px;
