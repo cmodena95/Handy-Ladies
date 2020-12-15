@@ -10,7 +10,7 @@
       <% end %>
     </div>
 
-    <h3><%= @job.date.strftime('%b %e, %l:%M %p') %></h3>
+    <h3><%= format_time(@job.date).strftime('%b %e, %l:%M %p') %></h3>
 
 
     <h3><%= @job.handylady.hourly_price %>€/h</h3>

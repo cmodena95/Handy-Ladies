@@ -6,7 +6,8 @@ const initFlatpickr = () => {
     console.log(flatElement);
     if (flatElement){
         flatpickr(flatElement, {
-           disableMobile: 'true'
+           disableMobile: 'true',
+           enableTime: 'true'
         });
     }
 }
