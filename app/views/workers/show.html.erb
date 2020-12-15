@@ -28,8 +28,8 @@
   <h4> <i class="fas fa-map-marker-alt"></i> Lives in <%= @user.address %></h4>
 </div>
 
-<% if current_user.handylady? %>
-  <h2>Skills:</h2>
+<% if @user.handylady? %>
+  <h2>Skills</h2>
   <div class="skills-container">
     <% @user.skills.each do |skill| %>
     <span class="pill"><%= skill.name %></span>
@@ -48,7 +48,7 @@
 <div class="reviews d-flex">
   <div class="avatar mr-5">
     <!-- not sure how to get photos of the user who left the review -->
-    <%= cl_image_tag(@user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "card-avatar-bigger") %>
+    <%= cl_image_tag(current_user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "card-avatar-bigger") %>
   </div>
 
   <div class="review-information">
@@ -86,7 +86,7 @@
 <div class="form-buttons">
   <%# , worker_path(params[:worker_id]), %>
   <%= link_to "CONTACT", chat_path(@user), class: "button" %>
-  <% if current_user.handylady? %>
+  <% if @user.handylady? %>
     <%= link_to "BOOK NOW >", new_worker_job_path(@user), class: 'button button-primary submit-btn' %>
   <% end %>
 </div>
