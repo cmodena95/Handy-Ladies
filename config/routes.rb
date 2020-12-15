@@ -6,12 +6,13 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   end
 
-  resources :jobs, only: [:show]
-
   get 'chats/:user_id', to: 'chats#show', as: 'chat'
 
   resources :users, only: :show do
     resources :messages, only: :create
   end
+
+  resources :jobs, only: [:index, :show, :destroy, :update]
+
 end
 
