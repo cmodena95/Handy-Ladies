@@ -25,16 +25,18 @@ require("channels")
 // External imports
 import "bootstrap";
 
+// Chat
 import "cocoon-js";
-import { initFlatpickr } from "../plugins/flatpickr";
-
-import 'flatpickr/dist/flatpickr.min.css';
 import { initChatCable } from '../channels/chatroom_channel'
 
-// import { initFlatpickr } from "../plugins/flatpickr";
+// Algolia
+import "places.js";
+import { initAutocomplete } from '../plugins/init_autocomplete'
+
 import $ from 'jquery';
 global.$ = jQuery;
- import { initFlatpickr } from "../plugins/flatpickr";
+import { initFlatpickr } from "../plugins/flatpickr";
+
 
 
 // Internal imports, e.g:
@@ -45,16 +47,12 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
  // initFlatpickr();
   initChatCable();
-
-  const flatElement = document.querySelector(".form-control.string.optional.flatpickr");
-  if (flatElement) {
-
-    flatpickr(flatElement, {
-      altInput: true
-    });
-    console.log(flatpickr);
-  }
-
   initFlatpickr();
-
+  initAutocomplete();
 });
+
+//added by Athiley
+
+import { initStarRating } from '../plugins/init_star_rating';
+
+initStarRating();

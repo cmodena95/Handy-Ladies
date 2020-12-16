@@ -4,16 +4,14 @@
 
     <p>Joined in <%= @user.created_at.strftime("%b %d, %Y") %></p>
 
-    <p>From <%= @user.hourly_price %>€ /h</p>
-
   </div>
   <%= cl_image_tag(@user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "card-avatar-bigger") %>
 </div>
 
 
 <div class="pt-3 pb-4">
-  <h4>Identity verified</h4>
 
+    <h4>Identity verified <i class="far fa-check-circle"></i></h4>
   <% if @user.handylady? %>
     <h4><%= @user.hourly_price %> €/h</h4>
   <% end %>
@@ -39,23 +37,21 @@
   </div>
 <% end %>
 
-
-
 <div class="rev mt-3">
   <h2><%= @user.name %>'s reviews <%= @user.star_rating %>/5</h2>
 </div>
 
-
 <% @user.handylady_reviews.each do |review| %>
 <div class="reviews d-flex">
   <div class="avatar mr-5">
-    <!-- not sure how to get photos of the user who left the review -->
-    <%= cl_image_tag(current_user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "card-avatar-bigger") %>
+
+    <%= cl_image_tag(review.user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "card-avatar-bigger") %>
+
   </div>
 
   <div class="review-information">
     <div>
-      <h3><%= review.description %></h3>
+      <h3><%= review.title %></h3>
       <div class="stars d-flex">
         <% review.star_rating.times do %>
         <i class="fas fa-star"></i>
@@ -65,13 +61,13 @@
         <i class="far fa-star"></i>
         <% end %>
       </div>
-      <p><%= review.user.name %> on 23th Feb 2019</p>
+      <p><%= review.user.name %> - <%= review.created_at.strftime("%b %d, %Y") %></p>
     </div>
   </div>
 </div>
 <% end %>
 
-<% if current_user.handylady? %>
+<% if @user.handylady? %>
   <div class="works mt-5">
     <h2><%= @user.name %>'s jobs</h2>
     <div class="portfolio d-flex">
@@ -87,8 +83,8 @@
 
 <div class="form-buttons">
   <%# , worker_path(params[:worker_id]), %>
-  <%= link_to "CONTACT", chat_path(@user), class: "button" %>
-  <% if @user.handylady? %>
+  <% if @user.handylady? && @user != current_user %>
+    <%= link_to "CONTACT", chat_path(@user), class: "button" %>
     <%= link_to "BOOK NOW >", new_worker_job_path(@user), class: 'button button-primary submit-btn' %>
   <% end %>
 </div>

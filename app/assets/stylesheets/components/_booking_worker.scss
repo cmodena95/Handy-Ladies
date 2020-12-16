@@ -9,6 +9,7 @@
   align-items: center;
 }
 
+
 .profile-name {
   flex-grow: 1;
   margin-right: 16px;
@@ -44,33 +45,36 @@
   font-weight: bold;
 }
 
-.image-handylady{
-  margin-left: 16px;
-}
-
-#paymodalLabel{
-  font-size: 30px;
-  color: $primary;
-}
-
-#job-name {
-  font-weight: normal;
-  font-size: larger;
-}
-
-#job-worker{
-  color: $primary;
-  font-size: larger;
-  font-weight: 600;
+.job-info{
+  justify-content: flex-end;
+  flex-grow: 1;
+  margin-right: 16px;
 }
 
 .job-info > p{
-  margin-top: 5px;
+  color: #253f47;
   font-weight: 600;
+  font-size: 16px;
+}
+.image-handylady{
+  text-align: center;
+  font-weight: bold;
+  color: #253f47;
 }
 
 .fee-policy{
   font-style: italic;
-  color: darkgoldenrod;
+  color: grey;
   font-size: 13px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.sad-face{
+  text-align: center;
+}
+
+.sad-face i{
+  font-size: 40px;
+  padding-bottom: 16px;
 }
