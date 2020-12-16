@@ -48,7 +48,7 @@ class JobsController < ApplicationController
 
   def create_payment
     @amount = @job.handylady.hourly_price.to_i * 100
-    @job_title =  "#{@job.title} by "
+    @job_title = @job.title
     image_options = { width: 150, height: 150, crop: :fill }
     @image_path = Cloudinary::Utils.cloudinary_url(@job.handylady.photo.key, image_options)
     @session = Stripe::Checkout::Session.create(

@@ -11,7 +11,7 @@
 
 <div class="pt-3 pb-4">
     <h4>Identity verified <i class="far fa-check-circle"></i></h4>
-  <% if current_user.handylady? %>
+  <% if @user.handylady? %>
     <h4><%= @user.hourly_price %> €/h</h4>
   <% end %>
 
@@ -25,7 +25,7 @@
   <h4> <i class="fas fa-map-marker-alt"></i> Lives in <%= @user.address %></h4>
 </div>
 
-<% if current_user.handylady? %>
+<% if @user.handylady? %>
   <h2>Skills:</h2>
   <div class="skills-container">
     <% @user.skills.each do |skill| %>
@@ -43,7 +43,6 @@
 <% @user.handylady_reviews.each do |review| %>
 <div class="reviews d-flex">
   <div class="avatar mr-5">
-    <!-- not sure how to get photos of the user who left the review -->
     <%= cl_image_tag(review.user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "card-avatar-bigger") %>
   </div>
 
@@ -59,18 +58,18 @@
         <i class="far fa-star"></i>
         <% end %>
       </div>
-      <p><%= review.user.name %> on 23th Feb 2019</p>
+      <p><%= review.user.name %> - <%= review.created_at.strftime("%b %d, %Y") %></p>
     </div>
   </div>
 </div>
 <% end %>
 
-<% if current_user.handylady? %>
+<% if @user.handylady? %>
   <div class="works mt-5">
     <h2><%= @user.name %>'s jobs</h2>
     <div class="portfolio d-flex">
       <div class="picture mb-3">
-        <% current_user.portfolio_photos.each do |photo| %>
+        <% @user.portfolio_photos.each do |photo| %>
           <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
         <% end %>
       </div>
@@ -82,7 +81,7 @@
 <div class="form-buttons">
   <%# , worker_path(params[:worker_id]), %>
   <%= link_to "CONTACT", chat_path(@user), class: "button" %>
-  <% if @user.handylady? %>
+  <% if @user.handylady? && @user != current_user %>
     <%= link_to "BOOK NOW >", new_worker_job_path(@user), class: 'button button-primary submit-btn' %>
   <% end %>
 </div>

@@ -4,6 +4,7 @@ class UserSkill < ApplicationRecord
 
   validate :maximum_per_user
   after_create :updated_user
+  after_destroy :updated_user
 
   def maximum_per_user
     if user.user_skills.count >= 3
