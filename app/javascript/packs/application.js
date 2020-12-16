@@ -44,3 +44,9 @@ document.addEventListener('turbolinks:load', () => {
   initFlatpickr();
 
 });
+
+//added by Athiley
+
+import { initStarRating } from '../plugins/init_star_rating';
+
+initStarRating();

@@ -12,7 +12,9 @@ Rails.application.routes.draw do
     resources :messages, only: :create
   end
 
-  resources :jobs, only: [:index, :show, :destroy, :update]
+  resources :jobs, only: [:index, :show, :destroy, :update] do
+    resources :reviews, only: [:new, :create]
+  end
 
 end
 
