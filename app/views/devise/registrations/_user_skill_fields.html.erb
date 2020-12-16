@@ -1,5 +1,11 @@
 <div class='nested-fields'>
     <%= f.association :skill %>
     <%= f.input :price %>
-    <%= link_to_remove_association "remove task", f %>
+    <%= link_to_remove_association "remove skill", f %>
 </div>
+
+
+<!--  f.association :skill,
+                  as: :check_boxes,
+                  input_html: { class: "tag-selector" },
+                  item_wrapper_class: 'tag-item' -->
