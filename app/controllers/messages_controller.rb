@@ -1,4 +1,8 @@
 class MessagesController < ApplicationController
+  def index
+    @messages = Message.all
+  end
+
   def create
     @user = User.find(params[:user_id])
     @message = Message.new(message_params)

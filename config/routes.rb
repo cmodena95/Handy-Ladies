@@ -9,12 +9,10 @@ Rails.application.routes.draw do
   get 'chats/:user_id', to: 'chats#show', as: 'chat'
 
   resources :users, only: [:index, :show] do
-    resources :messages, only: :create
+    resources :messages, only: [:create, :index]
   end
 
   resources :jobs, only: [:index, :show, :destroy, :update] do
     resources :reviews, only: [:new, :create]
   end
-
 end
-

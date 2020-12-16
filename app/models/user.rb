@@ -36,4 +36,26 @@ class User < ApplicationRecord
     rating.to_i
   end
 
+  def latest_messages
+    partner_ids = []
+    latest_messages_raw.filter do |message|
+      partner_id = [message.receiver_id, message.sender_id] - [id]
+      if partner_ids.include? partner_id
+        false
+      else
+        partner_ids << partner_id
+      end
+    end
+  end
+
+  private
+
+  def latest_messages_raw
+    messages = Message.includes(:sender, :receiver).select(
+      "DISTINCT ON (sender_id, receiver_id)
+        id, sender_id, receiver_id, content, created_at"
+    ).order('sender_id, receiver_id, created_at DESC')
+    .where('sender_id = :id or receiver_id = :id', id: id)
+    messages.sort { |m, n| n.created_at <=> m.created_at }
+  end
 end

@@ -10,6 +10,7 @@
 
 
 <div class="pt-3 pb-4">
+
     <h4>Identity verified <i class="far fa-check-circle"></i></h4>
   <% if @user.handylady? %>
     <h4><%= @user.hourly_price %> €/h</h4>
@@ -25,8 +26,10 @@
   <h4> <i class="fas fa-map-marker-alt"></i> Lives in <%= @user.address %></h4>
 </div>
 
+<br>
+
 <% if @user.handylady? %>
-  <h2>Skills:</h2>
+  <h2>Skills</h2>
   <div class="skills-container">
     <% @user.skills.each do |skill| %>
     <span class="pill"><%= skill.name %></span>
@@ -41,7 +44,9 @@
 <% @user.handylady_reviews.each do |review| %>
 <div class="reviews d-flex">
   <div class="avatar mr-5">
+
     <%= cl_image_tag(review.user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "card-avatar-bigger") %>
+
   </div>
 
   <div class="review-information">
