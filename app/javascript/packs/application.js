@@ -25,12 +25,18 @@ require("channels")
 // External imports
 import "bootstrap";
 
+// Chat
 import "cocoon-js";
 import { initChatCable } from '../channels/chatroom_channel'
+
+// Algolia
+import "places.js";
+import { initAutocomplete } from '../plugins/init_autocomplete'
 
 import $ from 'jquery';
 global.$ = jQuery;
 import { initFlatpickr } from "../plugins/flatpickr";
+
 
 
 // Internal imports, e.g:
@@ -42,5 +48,5 @@ document.addEventListener('turbolinks:load', () => {
  // initFlatpickr();
   initChatCable();
   initFlatpickr();
-
+  initAutocomplete();
 });
