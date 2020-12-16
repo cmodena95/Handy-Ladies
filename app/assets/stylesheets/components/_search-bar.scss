@@ -4,7 +4,6 @@
 }
 
 .search-form {
-  position: absolute;
   width: 100%;
   .form-control {
     border-radius: 50px;
@@ -13,4 +12,16 @@
 
   .search-button {
   position: absolute;
+  text-align: right;
+  top: 5px;
+  left: 330px;
+}
+
+.fa-search {
+  color: white !important;
+  font-size: 15px !important;
+}
+
+.sb {
+  border-radius: 50px !important;
 }

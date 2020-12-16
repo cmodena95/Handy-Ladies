@@ -4,11 +4,12 @@
 
 
 <% messages = [] %>
-
 <% @messages.each do |m| %>
 <% if m.sender_id == current_user.id || m.receiver_id == current_user.id %>
-<% messages << m %>
+<%= messages << m %>
 <% end %>
 <% end %>
 
-<% p messages %>
+<% p messages.sort_by &:created_at %>
+
+
