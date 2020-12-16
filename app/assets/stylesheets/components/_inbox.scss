@@ -1,0 +1,26 @@
+.inbox-message {
+  display: flex;
+  margin: 10px 0px 10px 0px;
+}
+
+.inbox-message-content {
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+
+.inbox-message-icon {
+  position: absolute;
+
+}
+
+.sender {
+  position: relative;
+  bottom: 40px;
+}
+
+.receiver {
+  position: relative;
+  width: 50px !important;
+  height: 50px !important;
+  z-index: 1;
+}

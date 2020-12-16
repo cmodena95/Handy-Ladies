@@ -1,15 +1,26 @@
-<!-- Message.where(sender: current_user, receiver: ?).or(Message.where(......)).order(:create_at).first
- -->
+<h1>Inbox</h1>
 
+<div class="inbox">
 
+  <% current_user.latest_messages.each do |m| %>
+  <div class="inbox-message">
+    <div class="inbox-message-icon">
+      <div class="inbox-message-icon-receiver">
+        <%= cl_image_tag(m.receiver.photo.key, crop: :thumb, gravity: :face, class: "card-avatar-bigger receiver") %>
+      </div>
+      <div class="inbox-message-icon-sender">
+        <%= cl_image_tag(m.sender.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "card-avatar-bigger sender") %>
+      </div>
+    </div>
+    <div class="inbox-message-content">
+      <%= p m.sender.name %>
+      <br>
+      <%= p m.content %>
+      <br>
+      <%= p m.created_at %>
+    </div>
+  </div>
+  <% end %>
 
-<% messages = [] %>
-<% @messages.each do |m| %>
-<% if m.sender_id == current_user.id || m.receiver_id == current_user.id %>
-<%= messages << m %>
-<% end %>
-<% end %>
-
-<% p messages.sort_by &:created_at %>
-
+</div>
 
