@@ -13,11 +13,9 @@
       </div>
     </div>
     <div class="inbox-message-content">
-      <%= p m.sender.name %>
-      <br>
-      <%= p m.content %>
-      <br>
-      <%= p m.created_at %>
+      <h4 id="msg-s"><%= p m.sender.name %></h4>
+      <cards-p id="msg-c"><%= p m.content.truncate(30) %></cards-p>
+      <h4 id="msg-s"><%= p m.created_at.strftime("%b %e, %k:%M") %></h4>
     </div>
   </div>
   <% end %>
