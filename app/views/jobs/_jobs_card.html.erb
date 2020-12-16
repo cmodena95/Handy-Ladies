@@ -1,6 +1,6 @@
 <div class="container">
   <div class="card-worker mt-3">
-    <%= cl_image_tag(current_user.handylady? ? job.customer.photo.key : job.handylady.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face) %>
+    <%= cl_image_tag(current_user == job.handylady ? job.customer.photo.key : job.handylady.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face) %>
     <div class="card-worker-infos flex-box">
 
       <div class="d-flex justify-content-between">
@@ -12,7 +12,7 @@
           <i class='far fa-comment'></i>
         <% end %>
       </div>
-      <p><%= job.customer.name %></p>
+      <p><%= current_user == job.handylady ? job.customer.name : job.handylady.name %></p>
       <% if job.customer == current_user && job.can_review? %>
         <div class="d-flex status">
           <%= link_to  "Review", new_job_review_path(job) %>
