@@ -2,19 +2,28 @@
   <div class="card-worker mt-3">
     <%= cl_image_tag(current_user.handylady? ? job.customer.photo.key : job.handylady.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face) %>
     <div class="card-worker-infos flex-box">
-      
+
       <div class="d-flex justify-content-between">
         <h3><%= job.date.strftime('%b %e, %l:%M %p') %></h3>
         <h3><%= job.handylady.hourly_price %>€/h</h3>
       </div>
+      <div class="d-flex justify-content-end">
+        <%= link_to chat_path(job.customer) do %>
+          <i class='far fa-comment'></i>
+        <% end %>
+      </div>
       <p><%= job.customer.name %></p>
-      
-      <% if current_user.handylady? && job.handylady == current_user %>
-        <div class="d-flex justify-content-between">
-          <div><h5 class="d-flex justify-content-end <%= job.status %>" ><%= job.status %></h5></div>
-          <%# we should put the correct path for the messages here. %>
-          <div><i class="far fa-comment"></i></div>
+      <% if job.customer == current_user && job.can_review? %>
+        <div class="d-flex status">
+          <%= link_to  "Review", new_job_review_path(job) %>
         </div>
+
+        <% elsif current_user.handylady? && job.handylady == current_user %>
+        <div class="d-flex justify-content-between">
+          <div><h5 class="d-flex justify-content-end <%= job.status %>" ><%= job.status %></h5>
+          </div>
+        </div>
+        
       <% end %>
 
     </div>
@@ -35,8 +44,8 @@
           <%= j.input :status, as: :hidden, input_html: {value: "rejected"} %>
           <%= j.button :submit, "reject", class: 'reject w-100' %>
         <% end %>
+        
       </div>
-
     </div>
   <% end %>
 

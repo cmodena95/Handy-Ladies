@@ -13,4 +13,9 @@ class Message < ApplicationRecord
     user2_id = user2.id
     [user1_id, user2_id].sort.join('_')
   end
+
+  def conversation_partner(user)
+    partner = [receiver, sender] - [user]
+    partner.first
+  end
 end
