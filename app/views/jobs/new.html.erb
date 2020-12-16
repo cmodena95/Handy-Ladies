@@ -10,7 +10,7 @@
   <% @worker.skills.each do |skill| %>
     <span class="pill"><%= skill.name %></span>
   <% end %>
-  </div> 
+  </div>
 
   <%= simple_form_for [@worker, @job], url: worker_jobs_path, remote: true, input_html: { class: 'form-group' } do |f| %>
     <%= f.input :title %>

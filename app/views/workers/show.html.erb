@@ -34,8 +34,6 @@
   </div>
 <% end %>
 
-
-
 <div class="rev mt-3">
   <h2><%= @user.name %>'s reviews <%= @user.star_rating %>/5</h2>
 </div>
@@ -80,8 +78,8 @@
 
 <div class="form-buttons">
   <%# , worker_path(params[:worker_id]), %>
-  <%= link_to "CONTACT", chat_path(@user), class: "button" %>
   <% if @user.handylady? && @user != current_user %>
+    <%= link_to "CONTACT", chat_path(@user), class: "button" %>
     <%= link_to "BOOK NOW >", new_worker_job_path(@user), class: 'button button-primary submit-btn' %>
   <% end %>
 </div>
