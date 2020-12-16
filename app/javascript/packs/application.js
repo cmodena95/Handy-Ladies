@@ -50,3 +50,9 @@ document.addEventListener('turbolinks:load', () => {
   initFlatpickr();
   initAutocomplete();
 });
+
+//added by Athiley
+
+import { initStarRating } from '../plugins/init_star_rating';
+
+initStarRating();
