@@ -13,4 +13,7 @@ class ApplicationController < ActionController::Base
     worker_path(current_user)
   end
 
+  def default_url_options
+    { host: ENV["www.handyladies.xyz"] || "localhost:3000" }
+  end
 end
