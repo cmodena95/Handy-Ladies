@@ -18,4 +18,8 @@ class Job < ApplicationRecord
       errors.add(:date, "can't be in the past")
     end
   end
+
+  def can_review?
+    status == "accepted" || status == "done"
+  end
 end
