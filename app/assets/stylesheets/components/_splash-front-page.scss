@@ -7,7 +7,13 @@
 }
 
 .splash-button > a {
+  margin-left: 0;
   text-align: center;
+}
+
+.splash-button > a:visited{
+  color:white;
+  text-decoration: none;
 }
 
 #woman {
@@ -44,8 +50,5 @@ padding-bottom: 15px;
   margin: 0 auto;
   margin-top: 3px;
   margin-bottom: 6px;
-  margin-left: 120px;
-
-
 
 }

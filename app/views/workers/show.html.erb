@@ -86,6 +86,8 @@
   <%# , worker_path(params[:worker_id]), %>
   <% if @user.handylady? && @user != current_user %>
     <%= link_to "CONTACT", chat_path(@user), class: "button" %>
-    <%= link_to "BOOK NOW >", new_worker_job_path(@user), class: 'button button-primary submit-btn' %>
+    <%= link_to new_worker_job_path(@user), class: 'button button-primary submit-btn' do %>
+      BOOK NOW <i class="fas fa-chevron-right"></i>
+    <% end %>
   <% end %>
 </div>
