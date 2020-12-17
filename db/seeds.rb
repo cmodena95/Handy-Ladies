@@ -308,9 +308,9 @@ file = URI.open('https://photo.mybuilder.com/2_thumb/451249_0ab8749cca.jpg')
 job1 = Job.new(
   customer: norma,
   handylady: sophia,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 1).change(hour: 15),
   description: "Isn't working properly",
-  status: "done",
+  status: "pending",
   title: "need to fix some lights in my kitchen",
   location: "Barcelona",
   skill: electrical
@@ -322,9 +322,9 @@ file = URI.open('https://media-cdn.tripadvisor.com/media/photo-s/02/1f/8c/44/bro
 job2 = Job.create!(
   customer: natalie,
   handylady: grace,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 3).change(hour: 15),
   description: "Drawers are not working properly",
-  status: "done",
+  status: "pending",
   title: "Need to fix my wardrobe",
   location: "Barcelona",
   skill: carpenter
@@ -337,9 +337,9 @@ file = URI.open('https://i.pinimg.com/originals/56/92/04/569204e0add79b718e74185
 job3 = Job.create!(
   customer: katty,
   handylady: valentina,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 4).change(hour: 15),
   description: "I want to enlarge and remodel my ktichen ",
-  status: "done",
+  status: "pending",
   title: "Need take a wall down in my kitchen",
   location: "Barcelona",
   skill: bricklayer
@@ -351,9 +351,9 @@ file = URI.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ge
 job4 = Job.create!(
   customer: susan,
   handylady: juliet,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 1).change(hour: 15),
   description: "Currently is grey, I would like to set it pink",
-  status: "done",
+  status: "pending",
   title: "I want to change the colour of my wall room",
   location: "Barcelona",
   skill: painter
@@ -365,9 +365,9 @@ file = URI.open('https://i.pinimg.com/originals/72/41/62/7241627b27ddce6ecef70a4
 job5 = Job.create!(
   customer: victoria,
   handylady: maggie,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 5).change(hour: 15),
   description: "It's making a weird noise and the screen is black",
-  status: "done",
+  status: "pending",
   title: "My laptop doesn't turn on",
   location: "Barcelona",
   skill: it_technician
@@ -379,9 +379,9 @@ file = URI.open('https://lesliemaxwellkaiura.files.wordpress.com/2015/11/broken-
 job6 = Job.create!(
   customer: victoria,
   handylady: nina,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 6).change(hour: 15),
   description: "I just sat on it and it smashed to pieces",
-  status: "done",
+  status: "pending",
   title: "Broken chair",
   location: "Barcelona",
   skill: carpenter
@@ -393,9 +393,9 @@ file = URI.open('https://www.rentokil.com/au/blog/wp-content/uploads/2018/03/shu
 job7 = Job.create!(
   customer: katty,
   handylady: melissa,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 1).change(hour: 10),
   description: "Everything in my house is made of wood and has been eaten by termites, I now need everything reconstructed.",
-  status: "done",
+  status: "pending",
   title: "Everything is gone",
   location: "Barcelona",
   skill: carpenter
@@ -407,9 +407,9 @@ file = URI.open('https://i.pinimg.com/originals/49/52/7f/49527fb23fa987fbce7e2d4
 job8 = Job.create!(
   customer: nina,
   handylady: selena,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 9).change(hour: 18),
   description: "I'd like my house to be tiled from top to bottom, including my sofa as I find I sink into it too much when I sit down.",
-  status: "done",
+  status: "pending",
   title: "Need entire house tiled",
   location: "Barcelona",
   skill: tiler
@@ -421,9 +421,9 @@ file = URI.open('https://i.pinimg.com/originals/f2/0d/0b/f20d0b8f5ddb9fa9d629873
 job9 = Job.create!(
   customer: selena,
   handylady: francis,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 3).change(hour: 15),
   description: "All the chairlegs in my house are broken due to broken chairlegs.",
-  status: "done",
+  status: "pending",
   title: "Broken chair legs need to become whole chair legs",
   location: "Barcelona",
   skill: home_repair
@@ -435,9 +435,9 @@ file = URI.open('https://i.pinimg.com/originals/c4/f0/77/c4f077e14f87949677b8aa4
 job10 = Job.create!(
   customer: selena,
   handylady: beth,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 3).change(hour: 15),
   description: "My house is too green, it makes me feel like I'm laying face down in a field.",
-  status: "done",
+  status: "pending",
   title: "Need house painted",
   location: "Barcelona",
   skill: painter
@@ -449,9 +449,9 @@ file = URI.open('https://www.recovery-estonia.ee/wp-content/uploads/2017/02/Rect
 job11 = Job.create!(
   customer: beth,
   handylady: natalie,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 9).change(hour: 15),
   description: "It keeps sending abusive emails to my gardener",
-  status: "done",
+  status: "pending",
   title: "Computer is behaving strangely",
   location: "Barcelona",
   skill: it_technician
@@ -463,9 +463,9 @@ file = URI.open('https://www.propertyreporter.co.uk/images/660x350/16832-shutter
 job12 = Job.create!(
   customer: natalie,
   handylady: katty,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 2).change(hour: 15),
   description: "Need help moving from my apartment into a small hole",
-  status: "done",
+  status: "pending",
   title: "Moving help please",
   location: "Barcelona",
   skill: moving
@@ -477,9 +477,9 @@ file = URI.open('https://render.fineartamerica.com/images/rendered/default/canva
 job13 = Job.create!(
   customer: katty,
   handylady: susan,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 5).change(hour: 15),
   description: "I need all the windows painted over please",
-  status: "done",
+  status: "pending",
   title: "Painting help needed",
   location: "Barcelona",
   skill: painter
@@ -491,9 +491,9 @@ file = URI.open('https://www.gannett-cdn.com/presto/2020/08/24/USAT/793bbec9-745
 job14 = Job.create!(
   customer: susan,
   handylady: olivia,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 4).change(hour: 11),
   description: "Need it ripped out and replaced with nothing",
-  status: "done",
+  status: "pending",
   title: "Sick of my garden",
   location: "Barcelona",
   skill: gardening
@@ -505,9 +505,9 @@ file = URI.open('https://farm3.staticflickr.com/2558/3737216640_3e1111785e_z.jpg
 job15 = Job.create!(
   customer: olivia,
   handylady: amelia,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 3).change(hour: 15),
   description: "I'd like all my furniture moved out for no reason please",
-  status: "done",
+  status: "pending",
   title: "Sick of my furniture",
   location: "Barcelona",
   skill: moving
@@ -519,9 +519,9 @@ file = URI.open('https://photos.lensculture.com/large/49f47e7b-d938-4b96-a509-19
 job16 = Job.create!(
   customer: amelia,
   handylady: norma,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 8).change(hour: 15),
   description: "It's very dark",
-  status: "done",
+  status: "pending",
   title: "Please help",
   location: "Barcelona",
   skill: electrical
@@ -533,9 +533,9 @@ file = URI.open('https://i2-prod.mirror.co.uk/incoming/article21609476.ece/ALTER
 job17 = Job.create!(
   customer: amelia,
   handylady: louisa,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 1).change(hour: 9),
   description: "A flood is coming",
-  status: "done",
+  status: "pending",
   title: "Pipes have burst",
   location: "Barcelona",
   skill: plumber
