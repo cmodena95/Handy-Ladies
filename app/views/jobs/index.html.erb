@@ -1,4 +1,4 @@
-<h1>Services</h1>
+<h1>Jobs</h1>
 <% if current_user.handylady? %>
   <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -8,11 +8,13 @@
   </nav>
   <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="upcoming-jobs" role="tabpanel" aria-labelledby="upcoming-jobs-tab">
+    <p class="mt-3 pl-4">Here are some jobs for you!</p>
       <% @upcoming_jobs.each do |job| %>
         <%= render "jobs_card", job: job %>
       <% end %>
     </div>
     <div class="tab-pane fade" id="hired-jobs" role="tabpanel" aria-labelledby="hired-jobs-tab">
+    <p class="mt-3 pl-4">Here are the jobs you booked!</p>
       <% @hired_jobs.each do |job| %>
         <%= render "jobs_card", job: job %>
       <% end %>
