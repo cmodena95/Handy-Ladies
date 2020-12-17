@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-4">
+    <div class="col">
       <%= simple_form_for [@job, @review] do |f| %>
         <%= f.input :title %>
         <%= f.input :description %>
         <%= f.input :star_rating, collection: (1..5).to_a, label: "Rate your experience" %>
-        <%= f.submit "Send your review" %>
+        <%= f.submit "Send your review", class: 'button button-primary submit-btn' %>
       <% end %>
     </div>
   </div>

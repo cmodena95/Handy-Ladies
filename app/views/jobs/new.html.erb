@@ -21,7 +21,9 @@
     <%= f.input :date, as: :string, required: false, input_html: {class: "flatpickr"} %>
     <%= f.input :location, label: 'Address' %>
     <div class="form-buttons">
-      <%= link_to "< BACK", worker_path(params[:worker_id]), class: "button" %>
+      <%= link_to worker_path(params[:worker_id]), class: "button" do %>
+        <i class="fas fa-chevron-left"></i> BACK
+      <% end %>
       <%= f.submit 'SEND REQUEST', class: 'button button-primary submit-btn' %>
     </div>
   <% end %>
@@ -30,7 +32,7 @@
   <!-- modal -->
   <div class="modal fade" id="paymodal" tabindex="-1" role="dialog" aria-labelledby="paymodalLabel"
     aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content text-centered">
         <div class="modal-header">
           <h2>Handylady payment</h2>
