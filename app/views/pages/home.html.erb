@@ -3,8 +3,6 @@
     <h4>Barcelona <i class="fas fa-map-marker-alt"></i></h4>
   </div>
 
-  <br>
-
   <div class="homepage-text">
     <h2>Choose a skill...</h2>
   </div>
@@ -68,20 +66,18 @@
 
   <div class="search-bar">
     <div class="search-form">
-    <%= form_tag workers_path, method: :get do %>
-      <%= select_tag :query,
-        options_from_collection_for_select(Skill.all, "name", "name"),
-        class: "form-control",
-        placeholder: "Select by skill..."
-      %>
+      <%= form_tag workers_path, method: :get do %>
+        <%= select_tag :query,
+          options_from_collection_for_select(Skill.all, "name", "name"),
+          class: "form-control",
+          placeholder: "Select by skill..."
+        %>
+      <div class="search-button">
+      <%= button_tag type: 'submit', class: "btn btn-primary sb" do %>
+        <i class="fas fa-search sbb" aria-hidden="true"></i>
+      <% end %>
+      </div>
+      <% end %>
     </div>
-    <div class="search-button">
-    <%= button_tag type: 'submit', class: "btn btn-primary sb" do %>
-      <i class="fas fa-search sbb" aria-hidden="true"></i>
-    <% end %>
-    </div>
-    <% end %>
   </div>
-
-
 </div>
