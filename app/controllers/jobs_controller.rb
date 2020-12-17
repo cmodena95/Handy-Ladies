@@ -60,8 +60,8 @@ class JobsController < ApplicationController
         currency: 'eur',
         quantity: 1
       }],
-      success_url: job_url(@job),
-      cancel_url: job_url(@job)
+      success_url: "http://www.handyladies.xyz/jobs/#{@job.id}",
+      cancel_url: "http://www.handyladies.xyz/jobs/#{@job.id}"
     )
 
     @payment = Payment.create(
