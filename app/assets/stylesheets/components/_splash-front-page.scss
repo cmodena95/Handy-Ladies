@@ -1,0 +1,51 @@
+.splash-button  {
+  padding: 16px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  position: center;
+  padding-top: 10px;
+}
+
+.splash-button > a {
+  text-align: center;
+}
+
+#woman {
+width: 100%;
+position: relative;
+padding-top: 20px;
+padding-bottom: 15px;
+
+}
+
+.splash-phrase > h2 {
+  font-family: 'Comfortaa', cursive;
+  font-size: 25px;
+  color: #FF4F5A;
+  font-weight: bold;
+  text-align: center;
+}
+
+.splash-title > h1 {
+  font-family: 'Comfortaa', cursive;
+  font-size: 45px;
+  color: #253F47;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+.splash-line {
+  width: 150px;
+  height: 5px;
+  background-color: $primary;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-top: 3px;
+  margin-bottom: 6px;
+  margin-left: 120px;
+
+
+
+}
