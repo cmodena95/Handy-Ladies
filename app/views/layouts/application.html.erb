@@ -60,14 +60,16 @@
 
   <body data-current-user="<%= current_user&.id %>">
     <div class="home-container">
-      <%= render 'shared/navbar' unless action_name == "splash"%>
+      <%= render 'shared/navbar' %>
       <%= render 'shared/flashes' %>
       <%= yield %>
     </div>
 
-    <%= render 'shared/footer'unless action_name == "splash" %>
+    <%= render 'shared/footer' %>
 
   </body>
+
+  <%# bye bug %>
 </html>
 
 
