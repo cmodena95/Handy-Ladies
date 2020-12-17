@@ -37,6 +37,7 @@ import $ from 'jquery';
 global.$ = jQuery;
 import { initFlatpickr } from "../plugins/flatpickr";
 
+import { initStarRating } from '../plugins/init_star_rating';
 
 
 // Internal imports, e.g:
@@ -49,10 +50,12 @@ document.addEventListener('turbolinks:load', () => {
   initChatCable();
   initFlatpickr();
   initAutocomplete();
+  //added by Athiley
+  initStarRating();
 });
 
-//added by Athiley
 
-import { initStarRating } from '../plugins/init_star_rating';
 
-initStarRating();
+
+
+

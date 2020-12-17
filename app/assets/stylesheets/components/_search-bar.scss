@@ -8,16 +8,22 @@
   .form-control {
     border-radius: 50px;
   }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
 }
 
 .sb {
-  border-radius: 50px !important;
-  position: absolute;
-  text-align: right;
-  top: 8px;
-  left: 335px;
-  width: 35px;
-  height: 35px;
+    border-radius: 50px !important;
+    position: absolute;
+    text-align: right;
+    top: 5px;
+    right: 7px;
+    width: 40px;
+    height: 40px;
 }
 
 .sbb {
@@ -25,3 +31,4 @@
   font-size: 15px !important;
   right: 10px;
 }
+

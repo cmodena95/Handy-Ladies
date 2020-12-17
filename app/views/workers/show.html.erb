@@ -68,7 +68,7 @@
 </div>
 <% end %>
 
-<% if @user.handylady? %>
+<% if @user.handylady? && @user.portfolio_photos.attached? %>
   <div class="works mt-5">
     <h2><%= @user.name %>'s jobs</h2>
     <div class="portfolio d-flex">
