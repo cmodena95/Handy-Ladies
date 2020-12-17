@@ -15,7 +15,8 @@ width: 100%;
 position: relative;
 padding-top: 20px;
 padding-bottom: 15px;
-
+height: 100%;
+object-fit: contain;
 }
 
 .splash-phrase > h2 {
@@ -32,8 +33,8 @@ padding-bottom: 15px;
   color: #253F47;
   font-weight: bold;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 15px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .splash-line {
@@ -44,8 +45,9 @@ padding-bottom: 15px;
   margin: 0 auto;
   margin-top: 3px;
   margin-bottom: 6px;
-  margin-left: 120px;
+  // margin-left: 120px;
+}
 
-
-
+.splash-photo {
+  height: 40vh;
 }
