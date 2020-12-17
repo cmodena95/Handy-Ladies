@@ -10,6 +10,13 @@
   align-items: center;
   border-radius: 6px;
   width: 100%;
+  position: relative;
+}
+
+.card-worker-chat{
+  position: absolute;
+  right: 16px;
+  top: 40%;
 }
 
 .card-worker img {

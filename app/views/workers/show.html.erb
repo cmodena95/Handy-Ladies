@@ -17,7 +17,7 @@
   <% end %>
 
 
-  <h4><%= @user.handylady_reviews.length %> reviews</h4>
+  <h4><%= pluralize(@user.handylady_reviews.length, "review") %> </h4>
 </div>
 
 <div class="pb-3 mr-3 mt-2">

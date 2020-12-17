@@ -13,7 +13,7 @@ puts "completed"
 
 puts "Creating users..."
 
-file = URI.open('https://avatars0.githubusercontent.com/u/63473623?v=4')
+file = URI.open('https://i0.wp.com/www.middleeastmonitor.com/wp-content/uploads/2018/12/2018_12-17-gaza-women-carpenter2.jpg?quality=85&strip=all&zoom=1&ssl=1')
 norma = User.new(
   name: "Norma",
   address: "Barcelona, Spain",
@@ -29,7 +29,7 @@ norma = User.new(
 norma.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 norma.save!
 
-file = URI.open('https://avatars3.githubusercontent.com/u/68252652?v=4  ')
+file = URI.open('https://mh-2-stockagency.panthermedia.net/media/previews/0005000000/05878000/~female-plumber-fitting-a-kitchen-sink_05878539_high.jpg')
 louisa = User.new(
   name: "Louisa",
   address: "Madrid, Spain",
@@ -44,7 +44,7 @@ louisa = User.new(
 louisa.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 louisa.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023860/ladies%202/A51FF5E4-EFE3-4CAF-84E5-147FAE2766A3_csb2gq.jpg')
+file = URI.open('https://pbs.twimg.com/media/ELHKCmPWkAEHpEp.jpg')
 francis = User.new(
   name: "Francis",
   address: "Madrid, Spain",
@@ -59,7 +59,7 @@ francis = User.new(
 francis.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 francis.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023860/ladies%202/F29DF9E8-AF61-4114-B76D-35C3A05BC55B_kjmlp8.jpg')
+file = URI.open('https://www.nj.com/resizer/409Xx92tbn63vR-SDZtKLY4HLJA=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.nj.com/home/njo-media/width2048/img/centraljersey_impact/photo/photo---brittany-using-her-carpentry-tooljpg-fae9f0b3396abdb3.jpg')
 beth = User.new(
   name: "Beth",
   address: "Sitges, Spain",
@@ -74,7 +74,7 @@ beth = User.new(
 beth.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 beth.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023860/ladies%202/0E1F2DE2-63D8-456C-A675-8E57C815FC89_kxk803.jpg')
+file = URI.open('https://www.greenplumbingnj.com/wp-content/uploads/2016/03/apprentice-plumber2.jpg')
 natalie = User.new(
 name: "Natalie",
 address: "Barcelona, Spain",
@@ -89,7 +89,7 @@ available_until: Time.now.advance(hour: 3)
 natalie.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 natalie.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023860/ladies%202/3F67FB0C-3328-4531-B1F5-8BC3D3FF2FC5_sqsjni.jpg')
+file = URI.open('https://i.pinimg.com/originals/14/d9/b6/14d9b61aa0f29ed72fbb2de3870b0575.jpg')
 katty = User.new(
 name: "Katty",
 address: "Barcelona, Spain",
@@ -104,7 +104,7 @@ available_until: Time.now.advance(hour: 3)
 katty.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 katty.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023859/ladies%202/E0EB88C0-2E75-465F-8FAC-F047C1A9D19E_lh9niy.jpg')
+file = URI.open('https://previews.123rf.com/images/auremar/auremar1209/auremar120900146/15072357-female-decorator-about-to-start-painting.jpg')
 susan = User.new(
 name: "Susan",
 address: "Barcelona, Spain",
@@ -119,7 +119,7 @@ available_until: Time.now.advance(hour: 3)
 susan.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 susan.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023859/ladies%202/6CCC6C59-AA5A-4FE9-8E98-806F25DDDA12_rxqjyp.jpg')
+file = URI.open('https://thumbs.dreamstime.com/b/gardening-concept-portrait-beautiful-female-gardener-watering-plants-garden-hot-summer-day-gardening-concept-portrait-138611114.jpg')
 olivia = User.new(
 name: "Olivia",
 address: "Barcelona, Spain",
@@ -135,13 +135,13 @@ available_until: Time.now.advance(hour: 3)
 olivia.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 olivia.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023859/ladies%202/9948FAFE-0E77-4725-8FDD-AFDCA44CF901_hydtxh.jpg')
+file = URI.open('https://res.cloudinary.com/hnmqik4yn/image/upload/c_fit,f_auto,fl_force_strip,q_auto/v1602099466/z8cyfjitu8kzcqm0uzmb')
 amelia = User.new(
 name: "Amelia",
 address: "Barcelona, Spain",
 latitude: 41.3894736,
 longitude: 2.154232,
-bio: "Burned out trying to follow IKEA user manuals to assemble your new furniture? leave it to me, I can do it incredible fast. Hit me up!",
+bio: "Burned out trying to follow IKEA user manuals to assemble your new furniture? leave it to me, I can do it incredibly fast. Hit me up!",
 email: "amelia@gmail.com",
 password:"123456",
 handylady: true,
@@ -150,7 +150,7 @@ available_until: Time.now.advance(hour: 3)
 amelia.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 amelia.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023859/ladies%202/D8B0DF08-2A9A-47F5-8CB2-AAB00C768AC3_ckfcxy.jpg')
+file = URI.open('https://previews.123rf.com/images/auremar/auremar1710/auremar171001345/88150054-female-electrician-at-work.jpg')
 sophia = User.new(
 name: "Sophia",
 address: "Barcelona, Spain",
@@ -165,7 +165,7 @@ available_until: Time.now.advance(hour: 3)
 sophia.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 sophia.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023859/ladies%202/8EA824A7-B16F-45E1-A887-0E3ACBA30C57_w8bcb1.jpg')
+file = URI.open('https://www.abc.net.au/cm/rimage/10428602-4x3-xlarge.jpg?v=3')
 grace = User.new(
 name: "Grace",
 address: "Barcelona, Spain",
@@ -180,7 +180,7 @@ available_until: Time.now.advance(hour: 3)
 grace.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 grace.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023859/ladies%202/A30A6702-93D2-4CC2-9BC4-C77EF843F0D9_mv2xeu.jpg')
+file = URI.open('https://assets.blog.hgtv.ca/wp-content/uploads/2019/02/28204624/alison-victoria-the-women-of-hgtv.jpg?width=435')
 valentina = User.new(
 name: "Valentina",
 address: "Barcelona, Spain",
@@ -195,7 +195,7 @@ available_until: Time.now.advance(hour: 3)
 valentina.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 valentina.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023858/ladies%202/584C8ADD-C4F2-4D18-89BC-07FACADD866E_wiqgjv.jpg')
+file = URI.open('https://www.iberian-escapes.com/images/housekeeping.jpg')
 juliet = User.new(
 name: "Juliet",
 address: "Barcelona, Spain",
@@ -210,7 +210,7 @@ available_until: Time.now.advance(hour: 3)
 juliet.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 juliet.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023858/ladies%202/72971199-C10B-43D6-A282-E836A5BBCDAA_fc6hpv.jpg')
+file = URI.open('https://www.thebalancesmb.com/thmb/wJxyTGVPkVsfovuf5Y-j8f28FVo=/2121x1414/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-929293448-5afdbcee31283400373b9269.jpg')
 maggie = User.new(
 name: "Maggie",
 address: "Barcelona, Spain",
@@ -226,7 +226,7 @@ available_until: Time.now.advance(hour: 3)
 maggie.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 maggie.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023858/ladies%202/5B07071F-D920-4C64-851A-84DA431DEA38_fizfbq.jpg')
+file = URI.open('https://previews.123rf.com/images/guruxox/guruxox1602/guruxox160200100/54552003-female-carpenter-using-electric-sander-female-carpenter-using-electric-sander-for-wood.jpg')
 nina = User.new(
 name: "Nina",
 address: "Barcelona, Spain",
@@ -241,7 +241,7 @@ available_until: Time.now.advance(hour: 3)
 nina.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 nina.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023858/ladies%202/BEC8FFFA-96D3-4315-8857-839951B524BA_dj6iux.jpg')
+file = URI.open('https://photo.mybuilder.com/2_thumb/12693555_6089462d92.jpg')
 melissa = User.new(
 name: "Melissa",
 address: "Barcelona, Spain",
@@ -256,7 +256,7 @@ available_until: Time.now.advance(hour: 3)
 melissa.photo.attach(io: file, filename: 'user.png', content_type: 'image/png')
 melissa.save!
 
-file = URI.open('https://res.cloudinary.com/dmkfulpzp/image/upload/v1608023859/ladies%202/D1BA3256-A008-4C8F-836B-AF9D54352F2E_mbmfi0.jpg')
+file = URI.open('https://paintingplacedecorators.co.uk/img/painters-decorators-crystal-palace.jpg')
 selena = User.new(
 name: "Selena",
 address: "Barcelona, Spain",
@@ -308,9 +308,9 @@ file = URI.open('https://photo.mybuilder.com/2_thumb/451249_0ab8749cca.jpg')
 job1 = Job.new(
   customer: norma,
   handylady: sophia,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 1).change(hour: 15),
   description: "Isn't working properly",
-  status: "done",
+  status: "pending",
   title: "need to fix some lights in my kitchen",
   location: "Barcelona",
   skill: electrical
@@ -322,9 +322,9 @@ file = URI.open('https://media-cdn.tripadvisor.com/media/photo-s/02/1f/8c/44/bro
 job2 = Job.create!(
   customer: natalie,
   handylady: grace,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 3).change(hour: 15),
   description: "Drawers are not working properly",
-  status: "done",
+  status: "pending",
   title: "Need to fix my wardrobe",
   location: "Barcelona",
   skill: carpenter
@@ -337,9 +337,9 @@ file = URI.open('https://i.pinimg.com/originals/56/92/04/569204e0add79b718e74185
 job3 = Job.create!(
   customer: katty,
   handylady: valentina,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 4).change(hour: 15),
   description: "I want to enlarge and remodel my ktichen ",
-  status: "done",
+  status: "pending",
   title: "Need take a wall down in my kitchen",
   location: "Barcelona",
   skill: bricklayer
@@ -351,9 +351,9 @@ file = URI.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ge
 job4 = Job.create!(
   customer: susan,
   handylady: juliet,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 1).change(hour: 15),
   description: "Currently is grey, I would like to set it pink",
-  status: "done",
+  status: "pending",
   title: "I want to change the colour of my wall room",
   location: "Barcelona",
   skill: painter
@@ -365,9 +365,9 @@ file = URI.open('https://i.pinimg.com/originals/72/41/62/7241627b27ddce6ecef70a4
 job5 = Job.create!(
   customer: victoria,
   handylady: maggie,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 5).change(hour: 15),
   description: "It's making a weird noise and the screen is black",
-  status: "done",
+  status: "pending",
   title: "My laptop doesn't turn on",
   location: "Barcelona",
   skill: it_technician
@@ -379,9 +379,9 @@ file = URI.open('https://lesliemaxwellkaiura.files.wordpress.com/2015/11/broken-
 job6 = Job.create!(
   customer: victoria,
   handylady: nina,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 6).change(hour: 15),
   description: "I just sat on it and it smashed to pieces",
-  status: "done",
+  status: "pending",
   title: "Broken chair",
   location: "Barcelona",
   skill: carpenter
@@ -393,9 +393,9 @@ file = URI.open('https://www.rentokil.com/au/blog/wp-content/uploads/2018/03/shu
 job7 = Job.create!(
   customer: katty,
   handylady: melissa,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 1).change(hour: 10),
   description: "Everything in my house is made of wood and has been eaten by termites, I now need everything reconstructed.",
-  status: "done",
+  status: "pending",
   title: "Everything is gone",
   location: "Barcelona",
   skill: carpenter
@@ -407,9 +407,9 @@ file = URI.open('https://i.pinimg.com/originals/49/52/7f/49527fb23fa987fbce7e2d4
 job8 = Job.create!(
   customer: nina,
   handylady: selena,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 9).change(hour: 18),
   description: "I'd like my house to be tiled from top to bottom, including my sofa as I find I sink into it too much when I sit down.",
-  status: "done",
+  status: "pending",
   title: "Need entire house tiled",
   location: "Barcelona",
   skill: tiler
@@ -421,9 +421,9 @@ file = URI.open('https://i.pinimg.com/originals/f2/0d/0b/f20d0b8f5ddb9fa9d629873
 job9 = Job.create!(
   customer: selena,
   handylady: francis,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 3).change(hour: 15),
   description: "All the chairlegs in my house are broken due to broken chairlegs.",
-  status: "done",
+  status: "pending",
   title: "Broken chair legs need to become whole chair legs",
   location: "Barcelona",
   skill: home_repair
@@ -435,9 +435,9 @@ file = URI.open('https://i.pinimg.com/originals/c4/f0/77/c4f077e14f87949677b8aa4
 job10 = Job.create!(
   customer: selena,
   handylady: beth,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 3).change(hour: 15),
   description: "My house is too green, it makes me feel like I'm laying face down in a field.",
-  status: "done",
+  status: "pending",
   title: "Need house painted",
   location: "Barcelona",
   skill: painter
@@ -449,9 +449,9 @@ file = URI.open('https://www.recovery-estonia.ee/wp-content/uploads/2017/02/Rect
 job11 = Job.create!(
   customer: beth,
   handylady: natalie,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 9).change(hour: 15),
   description: "It keeps sending abusive emails to my gardener",
-  status: "done",
+  status: "pending",
   title: "Computer is behaving strangely",
   location: "Barcelona",
   skill: it_technician
@@ -463,9 +463,9 @@ file = URI.open('https://www.propertyreporter.co.uk/images/660x350/16832-shutter
 job12 = Job.create!(
   customer: natalie,
   handylady: katty,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 2).change(hour: 15),
   description: "Need help moving from my apartment into a small hole",
-  status: "done",
+  status: "pending",
   title: "Moving help please",
   location: "Barcelona",
   skill: moving
@@ -477,9 +477,9 @@ file = URI.open('https://render.fineartamerica.com/images/rendered/default/canva
 job13 = Job.create!(
   customer: katty,
   handylady: susan,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 5).change(hour: 15),
   description: "I need all the windows painted over please",
-  status: "done",
+  status: "pending",
   title: "Painting help needed",
   location: "Barcelona",
   skill: painter
@@ -491,9 +491,9 @@ file = URI.open('https://www.gannett-cdn.com/presto/2020/08/24/USAT/793bbec9-745
 job14 = Job.create!(
   customer: susan,
   handylady: olivia,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 4).change(hour: 11),
   description: "Need it ripped out and replaced with nothing",
-  status: "done",
+  status: "pending",
   title: "Sick of my garden",
   location: "Barcelona",
   skill: gardening
@@ -505,9 +505,9 @@ file = URI.open('https://farm3.staticflickr.com/2558/3737216640_3e1111785e_z.jpg
 job15 = Job.create!(
   customer: olivia,
   handylady: amelia,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 3).change(hour: 15),
   description: "I'd like all my furniture moved out for no reason please",
-  status: "done",
+  status: "pending",
   title: "Sick of my furniture",
   location: "Barcelona",
   skill: moving
@@ -519,9 +519,9 @@ file = URI.open('https://photos.lensculture.com/large/49f47e7b-d938-4b96-a509-19
 job16 = Job.create!(
   customer: amelia,
   handylady: norma,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 8).change(hour: 15),
   description: "It's very dark",
-  status: "done",
+  status: "pending",
   title: "Please help",
   location: "Barcelona",
   skill: electrical
@@ -533,9 +533,9 @@ file = URI.open('https://i2-prod.mirror.co.uk/incoming/article21609476.ece/ALTER
 job17 = Job.create!(
   customer: amelia,
   handylady: louisa,
-  date: Date.tomorrow,
+  date: Time.now.advance(day: 1).change(hour: 9),
   description: "A flood is coming",
-  status: "done",
+  status: "pending",
   title: "Pipes have burst",
   location: "Barcelona",
   skill: plumber
