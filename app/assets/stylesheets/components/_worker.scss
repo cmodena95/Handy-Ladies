@@ -3,3 +3,14 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.pictures {
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  width: 100%;
+  img {
+    margin: 0 auto 20px;
+  }
+}
