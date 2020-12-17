@@ -19,15 +19,17 @@
   position: absolute;
 }
 
-.sender {
-  position: relative;
-  bottom: 40px;
-}
+.inbox {
 
-.receiver {
-  position: relative;
-  width: 50px !important;
-  height: 50px !important;
-  z-index: 1;
-}
+  .sender {
+    position: relative;
+    bottom: 40px;
+  }
 
+  .receiver {
+    position: relative;
+    width: 50px !important;
+    height: 50px !important;
+    z-index: 1;
+  }
+}
